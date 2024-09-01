@@ -1,15 +1,15 @@
-export function CourseForm() {}
+// export function CourseForm() {}
 
-export function LabForm() {}
+// export function LabForm() {}
 
-export function AssignmentForm() {}
+// export function AssignmentForm() {}
 
-export function ExperimentForm() {}
+// export function ExperimentForm() {}
 
-export function ExamForm() {}
+// export function ExamForm() {}
 
-export function ExamScoreForm() {}
+// export function ExamScoreForm() {}
 
-export function SubmissionForm() {}
+// export function SubmissionForm() {}
 
-export function ResourceForm() {}
+// export function ResourceForm() {}

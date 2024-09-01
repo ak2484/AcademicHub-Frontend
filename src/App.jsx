@@ -10,6 +10,7 @@ export default function App() {
         <HeroSection />
       </div>
       <Footer />
+
     </>
   );
 }

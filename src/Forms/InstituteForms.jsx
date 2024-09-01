@@ -1,5 +1,5 @@
-export function InstituteForm() {}
+// export function InstituteForm() {}
 
-export function DepartmentForm() {}
+// export function DepartmentForm() {}
 
-export function GroupForm() {}
+// export function GroupForm() {}
