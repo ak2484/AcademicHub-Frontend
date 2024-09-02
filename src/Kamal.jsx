@@ -1,4 +1,4 @@
-import { EnrollForm, LoginForm ,  } from "./Forms/AuthorizationForms";
+import { EnrollForm, LoginForm  } from "./Forms/AuthorizationForms";
 import {AssignmentForm, ExperimentForm, CourseForm , LabForm,  ExamForm , ExamScoreForm,SubmissionForm, ResourceForm} from "./Forms/AcademicForms"
 import { GroupForm, InstituteForm , DepartmentForm } from "./Forms/InstituteForms";
 import  { StudentForm, AdminForm, NonTeachingStaffForm, SystemAdminForm, TeachingStaffForm } from "./Forms/UserForms";
