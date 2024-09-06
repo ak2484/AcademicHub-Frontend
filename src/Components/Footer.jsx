@@ -13,9 +13,14 @@ const Footer = () => {
   return (
     <div className='max-w-full mx-auto py-16 px-[50px] grid lg:grid-cols-3 gap-8 text-white-smoke bg-smoky-black font-sans '>
       <div>
-        <h1 className='w-full text-3xl font-bold  font-serif px-[20px]'>
-          AcademicHub
-        </h1>
+        <div className='flex px-2'>
+          <img
+            className='h-10 w-auto  '
+            src='./src/assets/AcademicHubLogo1.png'
+            alt='logo'
+          />
+          <h1 className='w-full text-3xl font-bold  font-serif'>AcademicHub</h1>
+        </div>
         <p className='px-[20px] py-4 font-snas'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
           quaerat, modi voluptatem mollitia atque vero? Voluptatibus laboriosam
@@ -29,7 +34,7 @@ const Footer = () => {
       <div className='lg:col-span-3 flex justify-between text-white-smoke px-[20px]'>
         <div>
           <h6 className='font-medium text-white-smoke '>Solution</h6>
-          <ul>
+          <ul className='text-gray'>
             <li className='py-2 text-sm text-white-smoke'>Analytics</li>
             <li className='py-2 text-sm text-white-smoke'>Marketing</li>
             <li className='py-2 text-sm text-white-smoke'>Commerce</li>
@@ -39,7 +44,7 @@ const Footer = () => {
 
         <div>
           <h6 className='font-medium text-white-smoke '>Support</h6>
-          <ul>
+          <ul className='text-gray'>
             <li className='py-2 text-sm text-white-smoke'>Pricing</li>
             <li className='py-2 text-sm text-white-smoke'>Documentation</li>
             <li className='py-2 text-sm text-white-smoke'>Guides</li>
@@ -49,7 +54,7 @@ const Footer = () => {
 
         <div>
           <h6 className='font-medium text-white-smoke '>Support</h6>
-          <ul>
+          <ul className='text-gray'>
             <li className='py-2 text-sm text-white-smoke'>Pricing</li>
             <li className='py-2 text-sm text-white-smoke'>Documentation</li>
             <li className='py-2 text-sm text-white-smoke'>Guides</li>
@@ -59,7 +64,7 @@ const Footer = () => {
 
         <div>
           <h6 className='font-medium text-white-smoke '>Solution</h6>
-          <ul>
+          <ul className='text-gray'>
             <li className='py-2 text-sm text-white-smoke'>Analytics</li>
             <li className='py-2 text-sm text-white-smoke'>Marketing</li>
             <li className='py-2 text-sm text-white-smoke'>Commerce</li>
