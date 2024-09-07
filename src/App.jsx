@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./LandingPageComponents/Navbar";
 import HeroSection from "./LandingPageComponents/HeroSection";
 import Footer from "./LandingPageComponents/Footer";
-import Dashboard from "./Components/Dashboard";
+import Dashboard from "./StudentComponents/Dashboard";
 
 export default function App() {
   return (
