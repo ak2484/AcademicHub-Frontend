@@ -1,16 +1,20 @@
+import React from "react";
 import Navbar from "./LandingPageComponents/Navbar";
 import HeroSection from "./LandingPageComponents/HeroSection";
 import Footer from "./LandingPageComponents/Footer";
+import Dashboard from "./StudentComponents/Dashboard";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <div className=" flex justify-center mx-auto  px-20 bg-white-smoke">
+      <div className=' flex justify-center mx-auto  px-20 bg-white-smoke'>
         <HeroSection />
       </div>
       <Footer />
-
+      <div>
+        <Dashboard />
+      </div>
     </>
   );
 }

@@ -12,6 +12,11 @@ export default {
       "white-smoke": "#f5f5f5ff",
       "smoky-black": "#0a0000ff",
       gray: "#7f7979",
+      "lavender-blue": "#C0C0FF",
+      "pale-lavender": "#d5d5ff",
+      "lavender-web": "#EAEAFF",
+      "jordy-blue": "#9696FF",
+      "dark-imperial-blue": "#121266",
     },
     extend: {
       fontFamily: {

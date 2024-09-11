@@ -25,44 +25,53 @@ export function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-800">Login</h2>
-      
-      <div className="mb-4">
-        <label htmlFor="combinedDetails" className="block text-gray-700 text-sm font-medium mb-1">
+    <form
+      onSubmit={handleSubmit}
+      className='max-w-md mx-auto p-6 bg-white shadow-md rounded-lg'
+    >
+      <h2 className='text-2xl font-semibold mb-4 text-gray-800'>Login</h2>
+
+      <div className='mb-4'>
+        <label
+          htmlFor='combinedDetails'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           Email
         </label>
         <input
-          type="email"
-          id="combinedDetails"
-          name="combinedDetails"
+          type='email'
+          id='combinedDetails'
+          name='combinedDetails'
           value={formData.combinedDetails}
           onChange={handleChange}
-          placeholder="Enter your email"
+          placeholder='Enter your email'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      <div className="mb-4">
-        <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-1">
+      <div className='mb-4'>
+        <label
+          htmlFor='password'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           Password
         </label>
         <input
-          type="password"
-          id="password"
-          name="password"
+          type='password'
+          id='password'
+          name='password'
           value={formData.password}
           onChange={handleChange}
-          placeholder="Enter your password"
+          placeholder='Enter your password'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <button
-        type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
+        type='submit'
+        className='w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200'
       >
         Login
       </button>
@@ -95,91 +104,111 @@ export function EnrollForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-800">Admin Enrollment</h2>
+    <form
+      onSubmit={handleSubmit}
+      className='max-w-md mx-auto p-6 bg-white shadow-md rounded-lg'
+    >
+      <h2 className='text-2xl font-semibold mb-4 text-gray-800'>
+        Admin Enrollment
+      </h2>
 
-      <div className="mb-4">
-        <label htmlFor="instituteName" className="block text-gray-700 text-sm font-medium mb-1">
+      <div className='mb-4'>
+        <label
+          htmlFor='instituteName'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           Institute Name
         </label>
         <input
-          type="text"
-          id="instituteName"
-          name="instituteName"
+          type='text'
+          id='instituteName'
+          name='instituteName'
           value={formData.instituteName}
           onChange={handleChange}
-          placeholder="Enter your insititute name"
+          placeholder='Enter your insititute name'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      <div className="mb-4">
-        <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-1">
+      <div className='mb-4'>
+        <label
+          htmlFor='email'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           Email
         </label>
         <input
-          type="email"
-          id="email"
-          name="email"
+          type='email'
+          id='email'
+          name='email'
           value={formData.email}
           onChange={handleChange}
-          placeholder="Enter your email"
+          placeholder='Enter your email'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      <div className="mb-4">
-        <label htmlFor="mobileNumber" className="block text-gray-700 text-sm font-medium mb-1">
+      <div className='mb-4'>
+        <label
+          htmlFor='mobileNumber'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           Mobile Number
         </label>
         <input
-          type="tel"
-          id="mobileNumber"
-          name="mobileNumber"
+          type='tel'
+          id='mobileNumber'
+          name='mobileNumber'
           value={formData.mobileNumber}
           onChange={handleChange}
-          placeholder="Enter your monile no."
+          placeholder='Enter your monile no.'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      <div className="mb-4">
-        <label htmlFor="dteUdiseCode" className="block text-gray-700 text-sm font-medium mb-1">
+      <div className='mb-4'>
+        <label
+          htmlFor='dteUdiseCode'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           DTE/UDISE Code
         </label>
         <input
-          type="text"
-          id="dteUdiseCode"
-          name="dteUdiseCode"
+          type='text'
+          id='dteUdiseCode'
+          name='dteUdiseCode'
           value={formData.dteUdiseCode}
           onChange={handleChange}
-          placeholder="Enter DTE/UDISE Code"
+          placeholder='Enter DTE/UDISE Code'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      <div className="mb-4">
-        <label htmlFor="message" className="block text-gray-700 text-sm font-medium mb-1">
+      <div className='mb-4'>
+        <label
+          htmlFor='message'
+          className='block text-gray-700 text-sm font-medium mb-1'
+        >
           Message
         </label>
         <textarea
-          id="message"
-          name="message"
+          id='message'
+          name='message'
           value={formData.message}
           onChange={handleChange}
-          placeholder="Write your message"
+          placeholder='Write your message'
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <button
-        type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
+        type='submit'
+        className='w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200'
       >
         Submit
       </button>
