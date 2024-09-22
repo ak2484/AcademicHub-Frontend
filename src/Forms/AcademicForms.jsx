@@ -33,16 +33,14 @@ export function CourseForm({ departments, teachers }) {
 
   return (
     <form
-      className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-all duration-300 hover:shadow-xl"
+      className='max-w-lg mx-auto p-8 py-12 bg-lavender-web shadow-md rounded-xl shadow-outline font-sans text-dark-imperial-blue'
       onSubmit={handleSubmit}
     >
-      <h2 className="text-xl font-semibold text-gray-700 mb-6 text-center">
-        Create a New Course
-      </h2>
-
-      {/* Course Name */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="name">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='name'
+        >
           Course Name
         </label>
         <input
@@ -52,13 +50,15 @@ export function CourseForm({ departments, teachers }) {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      {/* Course Code */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="courseCode">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='courseCode'
+        >
           Course Code
         </label>
         <input
@@ -68,13 +68,15 @@ export function CourseForm({ departments, teachers }) {
           required
           value={formData.courseCode}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
-      {/* Year */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="year">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='year'
+        >
           Year
         </label>
         <select
@@ -93,9 +95,11 @@ export function CourseForm({ departments, teachers }) {
         </select>
       </div>
 
-      {/* Semester */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="semester">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='semester'
+        >
           Semester
         </label>
         <select
@@ -118,9 +122,11 @@ export function CourseForm({ departments, teachers }) {
         </select>
       </div>
 
-      {/* Credits */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="credits">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='credits'
+        >
           Credits
         </label>
         <input
@@ -134,9 +140,11 @@ export function CourseForm({ departments, teachers }) {
         />
       </div>
 
-      {/* Department */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="department">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='department'
+        >
           Department
         </label>
         <select
@@ -156,9 +164,11 @@ export function CourseForm({ departments, teachers }) {
         </select>
       </div>
 
-      {/* Teachers In Charge */}
-      <div className="mb-4">
-        <label className="block text-gray-800 text-sm font-semibold mb-1" htmlFor="teachersIncharge">
+      <div className='mb-4'>
+        <label
+          className='block text-gray-700 text-sm font-bold mb-2'
+          htmlFor='teachersIncharge'
+        >
           Teacher In Charge
         </label>
         <select
@@ -180,8 +190,8 @@ export function CourseForm({ departments, teachers }) {
       {/* Submit Button */}
       <div className="flex justify-end">
         <button
-          type="submit"
-          className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all duration-200 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+          type='submit'
+          className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring'
         >
           Create Course
         </button>

@@ -6,13 +6,10 @@ export default function Dashboard() {
           <div className='flex justify-between item-center'>
             <div className='flex items-center flex-shrink-0'>
               <img
-                className='h-10 w-auto mr-2 '
-                src='./src/assets/AcademicHubLogo1.png'
+                className='h-12 w-auto mr-2 '
+                src='./src/assets/AcademicHubLogo2.png'
                 alt='logo'
               />
-              <span className=' tracking-tight font-serif font-black text-palatinate-blue text-2xl'>
-                AcademicHub
-              </span>
             </div>
             <div className=' hidden lg:flex justify-cneter space-x-4 items-center font-sans text-[20px]'>
               <span>Student</span>

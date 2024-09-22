@@ -9,7 +9,7 @@ export default {
       "tropical-indigo": "#8282ffff",
       "powder-blue": "#adadffff",
       red: "#ff1010ff",
-      "white-smoke": "#f5f5f5ff",
+      "white-smoke": "#F5F5F5",
       "smoky-black": "#0a0000ff",
       gray: "#7f7979",
       "lavender-blue": "#C0C0FF",
@@ -17,6 +17,7 @@ export default {
       "lavender-web": "#EAEAFF",
       "jordy-blue": "#9696FF",
       "dark-imperial-blue": "#121266",
+      "cadmium-blue": "#1A1A99",
     },
     extend: {
       fontFamily: {
