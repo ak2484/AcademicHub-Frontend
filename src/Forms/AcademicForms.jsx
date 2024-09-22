@@ -37,12 +37,15 @@ export function CourseForm({ departments, teachers }) {
 
   return (
     <form
-      className='max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg'
+      className='max-w-lg mx-auto p-8 py-12 bg-lavender-web shadow-md rounded-xl shadow-outline font-sans text-dark-imperial-blue'
       onSubmit={handleSubmit}
     >
       <div className='mb-4'>
+        <h2 className='text-2xl font-semibold mb-4 font-serif  py-4 text-[28px]'>
+          Course Form
+        </h2>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='name'
         >
           Course Name
@@ -54,13 +57,14 @@ export function CourseForm({ departments, teachers }) {
           required
           value={formData.name}
           onChange={handleChange}
-          className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          placeholder='Enter Course Name'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
       <div className='mb-4'>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='courseCode'
         >
           Course Code
@@ -72,13 +76,14 @@ export function CourseForm({ departments, teachers }) {
           required
           value={formData.courseCode}
           onChange={handleChange}
-          className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          placeholder='Enter Course Code'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
-      <div className='mb-4'>
+      <div className='mb-4 text-[17px]'>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='year'
         >
           Year
@@ -101,7 +106,7 @@ export function CourseForm({ departments, teachers }) {
 
       <div className='mb-4'>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='semester'
         >
           Semester
@@ -128,7 +133,7 @@ export function CourseForm({ departments, teachers }) {
 
       <div className='mb-4'>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='credits'
         >
           Credits
@@ -146,7 +151,7 @@ export function CourseForm({ departments, teachers }) {
 
       <div className='mb-4'>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='department'
         >
           Department
@@ -170,7 +175,7 @@ export function CourseForm({ departments, teachers }) {
 
       <div className='mb-4'>
         <label
-          className='block text-gray-700 text-sm font-bold mb-2'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
           htmlFor='teachersIncharge'
         >
           Teacher In Charge
@@ -194,7 +199,7 @@ export function CourseForm({ departments, teachers }) {
       <div className='flex justify-end'>
         <button
           type='submit'
-          className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring'
+          className='w-full bg-palatinate-blue text-white-smoke px-4 py-2 rounded-full hover:bg-powder-blue focus:outline-none focus:ring focus:ring-blue-200 border text-[20px] mb-8'
         >
           Create Course
         </button>

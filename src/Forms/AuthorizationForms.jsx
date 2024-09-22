@@ -25,57 +25,75 @@ export function LoginForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className='max-w-md mx-auto p-6 bg-white shadow-md rounded-lg'
-    >
-      <h2 className='text-2xl font-semibold mb-4 text-gray-800'>Login</h2>
-
-      <div className='mb-4'>
-        <label
-          htmlFor='combinedDetails'
-          className='block text-gray-700 text-sm font-medium mb-1'
-        >
-          Email
-        </label>
-        <input
-          type='email'
-          id='combinedDetails'
-          name='combinedDetails'
-          value={formData.combinedDetails}
-          onChange={handleChange}
-          placeholder='Enter your email'
-          required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
+    <div className='flex-col items-center justify-center text-[17px] text-smoky-black'>
+      <div className='flex items-center justify-center  mb-4'>
+        <img
+          className=' h-12 w-auto  mb-4'
+          src='./src/assets/AcademicHubLogo2.png'
+          alt='logo'
         />
       </div>
-
-      <div className='mb-4'>
-        <label
-          htmlFor='password'
-          className='block text-gray-700 text-sm font-medium mb-1'
-        >
-          Password
-        </label>
-        <input
-          type='password'
-          id='password'
-          name='password'
-          value={formData.password}
-          onChange={handleChange}
-          placeholder='Enter your password'
-          required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
-        />
-      </div>
-
-      <button
-        type='submit'
-        className='w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200'
+      <form
+        onSubmit={handleSubmit}
+        className='max-w-lg mx-auto p-8 py-12 bg-lavender-web shadow-md rounded-xl shadow-outline font-sans'
       >
-        Login
-      </button>
-    </form>
+        <h2 className='text-2xl font-semibold mb-4 font-serif  py-4 text-[30px] text-smoky-black'>
+          Sign In
+        </h2>
+
+        <div className='mb-6'>
+          <label
+            htmlFor='combinedDetails'
+            className='block text-[17px] font-medium mb-1'
+          >
+            Email
+          </label>
+          <input
+            type='email'
+            id='combinedDetails'
+            name='combinedDetails'
+            value={formData.combinedDetails}
+            onChange={handleChange}
+            placeholder='Enter your email'
+            required
+            className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          />
+        </div>
+
+        <div className='mb-6'>
+          <label
+            htmlFor='password'
+            className='block  text-[17px] font-medium mb-1'
+          >
+            Password
+          </label>
+          <input
+            type='password'
+            id='password'
+            name='password'
+            value={formData.password}
+            onChange={handleChange}
+            placeholder='Enter your password'
+            required
+            className='w-full px-3 py-2 border border-lavender-blue rounded bg-white-smoke text-dark-imperial-blue focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          />
+        </div>
+
+        <div className='text-[12px] mb-6 text-smoky-black'>
+          <p>
+            Don’t remember your password?
+            <a className='font-semibold underline'>Forget Password</a>
+          </p>
+        </div>
+
+        <button
+          type='submit'
+          className='w-full bg-palatinate-blue border-smoky-black text-white-smoke px-4 py-2 rounded-full hover:bg-risd-blue focus:outline-none focus:ring focus:ring-blue-200 border text-[20px] mb-8'
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
   );
 }
 
@@ -106,16 +124,16 @@ export function EnrollForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-md mx-auto p-6 bg-white shadow-md rounded-lg'
+      className='max-w-lg mx-auto p-8 py-12 bg-lavender-web shadow-md rounded-xl shadow-outline font-sans text-dark-imperial-blue'
     >
-      <h2 className='text-2xl font-semibold mb-4 text-gray-800'>
+      <h2 className='text-2xl font-semibold mb-4 font-serif  py-4 text-[28px]'>
         Admin Enrollment
       </h2>
 
       <div className='mb-4'>
         <label
           htmlFor='instituteName'
-          className='block text-gray-700 text-sm font-medium mb-1'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
         >
           Institute Name
         </label>
@@ -127,14 +145,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter your insititute name'
           required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='email'
-          className='block text-gray-700 text-sm font-medium mb-1'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
         >
           Email
         </label>
@@ -146,14 +164,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter your email'
           required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='mobileNumber'
-          className='block text-gray-700 text-sm font-medium mb-1'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
         >
           Mobile Number
         </label>
@@ -165,14 +183,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter your monile no.'
           required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='dteUdiseCode'
-          className='block text-gray-700 text-sm font-medium mb-1'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
         >
           DTE/UDISE Code
         </label>
@@ -184,14 +202,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter DTE/UDISE Code'
           required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='message'
-          className='block text-gray-700 text-sm font-medium mb-1'
+          className='block text-gray-700 text-[17px] font-medium mb-1'
         >
           Message
         </label>
@@ -202,13 +220,13 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Write your message'
           required
-          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
+          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
         />
       </div>
 
       <button
         type='submit'
-        className='w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200'
+        className='w-full bg-palatinate-blue text-white-smoke px-4 py-2 rounded-full hover:bg-powder-blue focus:outline-none focus:ring focus:ring-blue-200 border text-[20px] mb-8'
       >
         Submit
       </button>
