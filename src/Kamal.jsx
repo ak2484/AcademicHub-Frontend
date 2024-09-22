@@ -41,7 +41,7 @@ const dummyData = {
 
 export default function Kamal() {
   return (
-    <div className='bg-white-smoke'>
+    <>
       <b>Authorization Forms</b>
       <h1>Login Form</h1>
       <LoginForm />
@@ -132,6 +132,6 @@ export default function Kamal() {
 
       <h1>System Admin Form</h1>
       <SystemAdminForm />
-    </div>
+    </>
   );
 }
