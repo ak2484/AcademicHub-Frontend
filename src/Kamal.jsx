@@ -18,6 +18,7 @@ import {
   TeachingStaffForm,
 } from "./Forms/UserForms";
 import GroupForm from "./Forms/GroupForm";
+import GroupForm from "./Forms/GroupForm";
 
 const dummyData = {
   availableUsers: [

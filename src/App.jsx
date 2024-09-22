@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./LandingPageComponents/Navbar";
 import HeroSection from "./LandingPageComponents/HeroSection";
 import Footer from "./LandingPageComponents/Footer";
