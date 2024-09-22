@@ -106,16 +106,16 @@ export function EnrollForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-lg mx-auto p-8 py-12 bg-lavender-web shadow-md rounded-xl shadow-outline font-sans text-dark-imperial-blue'
+      className='max-w-md mx-auto p-6 bg-white shadow-md rounded-lg'
     >
-      <h2 className='text-2xl font-semibold mb-4 font-serif  py-4 text-[28px]'>
+      <h2 className='text-2xl font-semibold mb-4 text-gray-800'>
         Admin Enrollment
       </h2>
 
       <div className='mb-4'>
         <label
           htmlFor='instituteName'
-          className='block text-gray-700 text-[17px] font-medium mb-1'
+          className='block text-gray-700 text-sm font-medium mb-1'
         >
           Institute Name
         </label>
@@ -127,14 +127,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter your insititute name'
           required
-          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='email'
-          className='block text-gray-700 text-[17px] font-medium mb-1'
+          className='block text-gray-700 text-sm font-medium mb-1'
         >
           Email
         </label>
@@ -146,14 +146,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter your email'
           required
-          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='mobileNumber'
-          className='block text-gray-700 text-[17px] font-medium mb-1'
+          className='block text-gray-700 text-sm font-medium mb-1'
         >
           Mobile Number
         </label>
@@ -165,14 +165,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter your monile no.'
           required
-          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='dteUdiseCode'
-          className='block text-gray-700 text-[17px] font-medium mb-1'
+          className='block text-gray-700 text-sm font-medium mb-1'
         >
           DTE/UDISE Code
         </label>
@@ -184,14 +184,14 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Enter DTE/UDISE Code'
           required
-          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <div className='mb-4'>
         <label
           htmlFor='message'
-          className='block text-gray-700 text-[17px] font-medium mb-1'
+          className='block text-gray-700 text-sm font-medium mb-1'
         >
           Message
         </label>
@@ -202,13 +202,13 @@ export function EnrollForm() {
           onChange={handleChange}
           placeholder='Write your message'
           required
-          className='w-full px-3 py-2 border border-lavender-blue bg-white-smoke  text-dark-imperial-blue rounded focus:outline-none focus:ring focus:border-lavender-blue-500 placeholder-cadmium-blue'
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500'
         />
       </div>
 
       <button
         type='submit'
-        className='w-full bg-palatinate-blue text-white-smoke px-4 py-2 rounded-full hover:bg-powder-blue focus:outline-none focus:ring focus:ring-blue-200 border text-[20px] mb-8'
+        className='w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200'
       >
         Submit
       </button>
