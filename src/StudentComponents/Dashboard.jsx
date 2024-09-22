@@ -26,9 +26,9 @@ export default function Dashboard() {
       </nav>
       <div className='text-sans text-[22px] text-palatinate-blue '>
         <div className=''>
-          <h2 className='font-bold bg-jordy-blue text-dark-imperial-blue px-6 py-3 sticky top-0 w-64 shadow-full'>
+          {/* <h2 className='font-bold bg-jordy-blue text-dark-imperial-blue px-6 py-3 sticky top-0 w-64 shadow-full'>
             Dashboard
-          </h2>
+          </h2> */}
           <div className='sticky top-0 h-screen w-64 p-6 shadow-lg bg-lavender-web'>
             <h2 className='space-y-4 font-bold'>My Desk</h2>
             <ul className='px-3'>
