@@ -17,7 +17,7 @@ import {
   SystemAdminForm,
   TeachingStaffForm,
 } from "./Forms/UserForms";
-import GroupForm from "./Forms/GroupForm"; 
+import GroupForm from "./Forms/GroupForm";
 
 const dummyData = {
   availableUsers: [
@@ -116,7 +116,7 @@ export default function Kamal() {
         institutes={dummyData.institutes}
         departments={dummyData.departments}
       />
-      
+
       <b>User Forms</b>
       <h1>Student Form</h1>
       <StudentForm />
@@ -132,7 +132,6 @@ export default function Kamal() {
 
       <h1>System Admin Form</h1>
       <SystemAdminForm />
-
     </>
   );
 }
