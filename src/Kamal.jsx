@@ -1,4 +1,4 @@
-import { EnrollForm, LoginForm } from "./Forms/AuthorizationForms";
+import { EnrollForm, LoginForm } from "./components/Forms/AuthorizationForms";
 import {
   AssignmentForm,
   ExperimentForm,
@@ -8,16 +8,16 @@ import {
   ExamScoreForm,
   SubmissionForm,
   ResourceForm,
-} from "./Forms/AcademicForms";
-import { InstituteForm, DepartmentForm } from "./Forms/InstituteForms";
+} from "./components/Forms/AcademicForms";
+import { InstituteForm, DepartmentForm } from "./components/Forms/InstituteForms";
 import {
   StudentForm,
   AdminForm,
   NonTeachingStaffForm,
   SystemAdminForm,
   TeachingStaffForm,
-} from "./Forms/UserForms";
-import GroupForm from "./Forms/GroupForm";
+} from "./components/Forms/UserForms";
+import GroupForm from "./components/Forms/GroupForm";
 
 const dummyData = {
   availableUsers: [

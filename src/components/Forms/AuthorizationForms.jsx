@@ -26,7 +26,7 @@ export function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-lg mx-auto p-8 py-12 bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
+      className='max-w-lg mx-auto p-8 mt-[200px] bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
     >
       <h2 className='text-3xl font-bold mb-6 text-blue-800 text-center'>
         Login
@@ -112,7 +112,7 @@ export function EnrollForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-lg mx-auto p-8 py-12 bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
+      className='max-w-lg mx-auto p-8 mt-[30px] bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
     >
       <h2 className='text-3xl font-bold mb-6 text-dark-imperial-blue text-center font-serif'>
         Admin Enrollment
