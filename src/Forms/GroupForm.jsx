@@ -62,8 +62,8 @@ function GroupForm({ availableUsers, institutes, departments }) {
 
   return (
     <form
-      className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg"
-      onSubmit={handleSubmit}
+    className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 hover:shadow-xl"
+    onSubmit={handleSubmit}
     >
       <div className="mb-4">
         <label
@@ -206,7 +206,7 @@ function GroupForm({ availableUsers, institutes, departments }) {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring"
+          className=' bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
         >
           Create Group
         </button>

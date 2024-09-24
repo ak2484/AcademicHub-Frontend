@@ -82,7 +82,9 @@ export function StudentForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} 
+    className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 hover:shadow-xl"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">Student Registration</h2>
 
       <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
@@ -418,8 +420,8 @@ export function StudentForm() {
       
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
-      >
+        className=' bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
+        >
         Submit
       </button>
     </form>
@@ -511,7 +513,9 @@ export function TeachingStaffForm() {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} 
+    className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 hover:shadow-xl"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">Teaching Staff Registration</h2>
 
       <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
@@ -827,8 +831,8 @@ export function TeachingStaffForm() {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
-      >
+        className=' bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
+        >
         Submit
       </button>
     </form>
@@ -899,7 +903,9 @@ export function NonTeachingStaffForm() {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} 
+    className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 hover:shadow-xl"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">Non-Teaching Staff Registration</h2>
 
       <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
@@ -1185,8 +1191,8 @@ export function NonTeachingStaffForm() {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
-      >
+        className=' bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
+        >
         Submit
       </button>
     </form>
@@ -1258,7 +1264,9 @@ export function AdminForm() {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} 
+    className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 hover:shadow-xl"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">Admin Registration</h2>
 
       <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
@@ -1544,8 +1552,8 @@ export function AdminForm() {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
-      >
+        className=' bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
+        >
         Submit
       </button>
     </form>
@@ -1616,7 +1624,9 @@ export function SystemAdminForm() {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} 
+    className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 hover:shadow-xl"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">System Admin Registration</h2>
 
       <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
@@ -1902,8 +1912,8 @@ export function SystemAdminForm() {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
-      >
+        className=' bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
+        >
         Submit
       </button>
     </form>
