@@ -72,7 +72,7 @@ export function LoginForm() {
 
       <button
         type='submit'
-        className='w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-3 rounded-lg hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 transform hover:scale-105'
+        className=' w-full bg-gradient-to-r from-palatinate-blue to-blue-600 text-white-smoke px-5 py-3 rounded-full hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 transform hover:scale-105 text-xl'
       >
         Login
       </button>
