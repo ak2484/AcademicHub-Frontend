@@ -26,7 +26,7 @@ export function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-lg mx-auto p-8 mt-[200px] bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
+      className='max-w-lg mx-auto p-6 mt-[130px] bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
     >
       <h2 className='text-3xl font-bold mb-6 text-blue-800 text-center'>
         Login
@@ -112,16 +112,16 @@ export function EnrollForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-lg mx-auto p-8 mt-[30px] bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
+      className='max-w-lg mx-auto p-4 mt-[25px] bg-gradient-to-br from-lavender to-lavender-web shadow-xl rounded-xl text-dark-imperial-blue transform transition-transform hover:scale-105'
     >
-      <h2 className='text-3xl font-bold mb-6 text-dark-imperial-blue text-center font-serif'>
+      <h2 className='text-3xl font-bold mb-5 text-dark-imperial-blue text-center font-serif'>
         Admin Enrollment
       </h2>
 
       <div className='mb-5'>
         <label
           htmlFor='instituteName'
-          className='block text-dark-imperial-blue text-lg font-medium mb-2'
+          className='block text-dark-imperial-blue text-lg font-medium mb-1'
         >
           Institute Name
         </label>
@@ -137,10 +137,10 @@ export function EnrollForm() {
         />
       </div>
 
-      <div className='mb-5'>
+      <div className='mb-4'>
         <label
           htmlFor='email'
-          className='block text-dark-imperial-blue text-lg font-medium mb-2'
+          className='block text-dark-imperial-blue text-lg font-medium mb-1'
         >
           Email
         </label>
@@ -156,10 +156,10 @@ export function EnrollForm() {
         />
       </div>
 
-      <div className='mb-5'>
+      <div className='mb-4'>
         <label
           htmlFor='mobileNumber'
-          className='block text-dark-imperial-blue text-lg font-medium mb-2'
+          className='block text-dark-imperial-blue text-lg font-medium mb-1'
         >
           Mobile Number
         </label>
@@ -178,7 +178,7 @@ export function EnrollForm() {
       <div className='mb-5'>
         <label
           htmlFor='dteUdiseCode'
-          className='block text-dark-imperial-blue text-lg font-medium mb-2'
+          className='block text-dark-imperial-blue text-lg font-medium mb-1'
         >
           DTE/UDISE Code
         </label>
@@ -194,7 +194,7 @@ export function EnrollForm() {
         />
       </div>
 
-      <div className='mb-5'>
+      <div className='mb-4'>
         <label
           htmlFor='message'
           className='block text-dark-imperial-blue text-lg font-medium mb-2'

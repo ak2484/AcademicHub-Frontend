@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Import Router and Routes
 import { Navbar, HeroSection, Footer } from './pages/LandingPage.jsx';
-import AdminDashboard from './components/Dashboard/AdminDashboard';
-import SystemAdminDashboard from './components/Dashboard/SystemAdminDashboard';
-import TeachingStaffDashboard from './components/Dashboard/TeachingStaffDashboard';
-import NonTeachingStaffDashboard from './components/Dashboard/NonTeachingStaffDashboard';
-import StudentDashboard from './components/Dashboard/StudentDashboard';
+import AdminDashboard from './components/Dashboards/AdminDashboard.jsx';
+import SystemAdminDashboard from './components/Dashboards/SystemAdminDashboard.jsx';
+import TeachingStaffDashboard from './components/Dashboards/TeachingStaffDashboard.jsx';
+import NonTeachingStaffDashboard from './components/Dashboards/NonTeachingStaffDashboard.jsx';
+import StudentDashboard from './components/Dashboards/StudentDashboard.jsx';
 import { EnrollForm, LoginForm } from './components/Forms/AuthorizationForms.jsx';
 
 const App = () => {
