@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/enroll" element={<EnrollForm />} /> 
 
-          {/* RoleBased User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}
+          {/* Role Based User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}
           <Route path="/system-admin" element={<SystemAdminDashboard />} /> 
           <Route path="/admin" element={<AdminDashboard />} /> 
           <Route path="/teaching-staff" element={<TeachingStaffDashboard />} /> 
