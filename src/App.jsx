@@ -41,14 +41,6 @@ const App = () => {
           <Route path='/login' element={<LoginForm />} />
           <Route path='/enroll' element={<EnrollForm />} />
 
-<<<<<<< HEAD
-          {/* Role Based User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}
-          <Route path="/system-admin" element={<SystemAdminDashboard />} /> 
-          <Route path="/admin" element={<AdminDashboard />} /> 
-          <Route path="/teaching-staff" element={<TeachingStaffDashboard />} /> 
-          <Route path="/non-teaching-staff" element={<NonTeachingStaffDashboard />} /> 
-          <Route path="/student" element={<StudentDashboard />} />
-=======
           {/* RoleBased User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}
           <Route path='/system-admin' element={<SystemAdminDashboard />} />
           <Route path='/admin' element={<AdminDashboard />} />
@@ -58,7 +50,6 @@ const App = () => {
             element={<NonTeachingStaffDashboard />}
           />
           <Route path='/student' element={<StudentDashboard />} />
->>>>>>> 2c6ca7e8f2610a2897e41f0e17d3912eceafcc20
         </Routes>
       </div>
     </>

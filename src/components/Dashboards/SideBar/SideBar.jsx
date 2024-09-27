@@ -15,18 +15,20 @@ export default function SideBar() {
               <h2 className='space-y-4 font-bold'>My Desk</h2>
               <ul className='px-3'>
                 <li className='cursor-pointer hover:text-powder-blue p-0.5 rounded'>
-                  <NavLink
-                    to=''
-                    className={({ isActive }) =>
-                      `${
-                        isActive
-                          ? "bg-risd-blue text-dark-imperial-blue font-medium"
-                          : ""
-                      }`
-                    }
-                  >
-                    Dashboard
-                  </NavLink>
+                  <div>
+                    <NavLink
+                      to=''
+                      className={({ isActive }) =>
+                        `${
+                          isActive
+                            ? "bg-tropical-indigo text-dark-imperial-blue font-medium"
+                            : ""
+                        }`
+                      }
+                    >
+                      Dashboard
+                    </NavLink>
+                  </div>
                 </li>
                 <li className='cursor-pointer hover:text-powder-blue p-0.5 rounded'>
                   <NavLink to='schedule'>Schedule</NavLink>
