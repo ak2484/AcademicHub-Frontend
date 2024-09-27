@@ -1,7 +1,7 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-//import Kamal from "./Kamal.jsx";
+import Kamal from "./Kamal.jsx";
 import "./index.css";
 import {
   createBrowserRouter,
@@ -24,6 +24,9 @@ import Collegesite from "./components/Dashboards/Collegesite/Collegesite.jsx";
 import Schedule from "./components/Dashboards/Schedule/Schedule.jsx";
 import Experiments from "./components/Dashboards/Experiments/Experiments.jsx";
 
+
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
@@ -44,9 +47,10 @@ const router = createBrowserRouter(
     </Route>
   )
 );
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Kamal /> */}
     <RouterProvider router={router} />
   </StrictMode>

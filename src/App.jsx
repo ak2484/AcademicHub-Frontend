@@ -32,6 +32,7 @@ const App = () => {
           <StudentDashboard />
         </>
       )}
+      
 
       {/* Define Routes */}
       <div>
@@ -43,6 +44,7 @@ const App = () => {
 
           {/* RoleBased User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}
           <Route path='/system-admin' element={<SystemAdminDashboard />} />
+          <Route path='/admin' element={<AdminDashboard />} />
           <Route path='/admin' element={<AdminDashboard />} />
           <Route path='/teaching-staff' element={<TeachingStaffDashboard />} />
           <Route
