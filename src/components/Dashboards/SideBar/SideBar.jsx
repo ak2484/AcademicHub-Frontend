@@ -7,7 +7,6 @@ export default function SideBar() {
     <>
       <div className='flex-col bg-white-smoke'>
         <div className='text-sans text-[22px] text-palatinate-blue '>
-          <div className=''>
             {/* <h2 className='font-bold bg-jordy-blue text-dark-imperial-blue px-6 py-3 sticky top-0 w-64 shadow-full'>
           Dashboard
         </h2> */}
@@ -15,13 +14,13 @@ export default function SideBar() {
               <h2 className='space-y-4 font-bold'>My Desk</h2>
               <ul className='px-3'>
                 <li className='cursor-pointer hover:text-powder-blue p-0.5 rounded'>
-                  <div>
+                  <div className="w-full hover:bg-tropical-indigo  text-dark-imperial-blue font-medium">
                     <NavLink
                       to=''
                       className={({ isActive }) =>
                         `${
                           isActive
-                            ? "bg-tropical-indigo text-dark-imperial-blue font-medium"
+                            ? "bg-tropical-indigo  text-dark-imperial-blue font-medium"
                             : ""
                         }`
                       }
@@ -77,7 +76,6 @@ export default function SideBar() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
