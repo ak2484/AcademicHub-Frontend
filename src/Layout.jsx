@@ -10,7 +10,7 @@ export default function Layout() {
       <DashNavBar />
       <div className='flex'>
         <SideBar />
-        <div className='text-4xl'>
+        <div className=' flex items-center justify-center w-full bg-white-smoke'>
           <Outlet />
         </div>
       </div>
