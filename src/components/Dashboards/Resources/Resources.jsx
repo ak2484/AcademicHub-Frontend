@@ -43,181 +43,209 @@ export default function ResourceForm({ courses, labs, users }) {
   const availableSubjects = formData.subjectType === "Course" ? courses : labs;
 
   return (
-    <form
-      className="h-screen w-screen mx-auto p-6 bg-white shadow-lg rounded-lg"
-      onSubmit={handleSubmit}
-    >
-      <h2 className="text-xl font-bold mb-4">Step {currentStep}</h2>
+    <>
+      <div className='flex justify-center items-center w-auto  bg-lavender-web rounded-xl'>
+        <form
+          className='mx-auto p-6 bg-white shadow-lg rounded-lg w-[400px]'
+          onSubmit={handleSubmit}
+        >
+          <h3 className='text-xl font-bold mb-4'>Step {currentStep}</h3>
 
-      {currentStep === 1 && (
-        <>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="name">
-              Resource Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {currentStep === 1 && (
+            <>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='name'
+                >
+                  Resource Name
+                </label>
+                <input
+                  type='text'
+                  id='name'
+                  name='name'
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                  placeholder='Enter resource name'
+                />
+              </div>
 
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="description">
-              Description
-            </label>
-            <textarea
-              id="description"
-              name="description"
-              value={formData.description}
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='description'
+                >
+                  Description
+                </label>
+                <textarea
+                  id='description'
+                  name='description'
+                  value={formData.description}
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                  placeholder='Enter Description'
+                />
+              </div>
 
-          <div className="flex items-start">
-            <button
-              type="button"
-              onClick={() => setCurrentStep(2)}
-              className="px-6 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Next
-            </button>
-          </div>
-        </>
-      )}
+              <div className='flex justify-end'>
+                <button
+                  type='button'
+                  onClick={() => setCurrentStep(2)}
+                  className='bg-palatinate-blue text-white-smoke px-5 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-palatinate-blue text-sm'
+                >
+                  Next
+                </button>
+              </div>
+            </>
+          )}
 
-      {currentStep === 2 && (
-        <>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="resourceURL">
-              Resource URL
-            </label>
-            <input
-              type="text"
-              id="resourceURL"
-              name="resourceURL"
-              value={formData.resourceURL}
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {currentStep === 2 && (
+            <>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='resourceURL'
+                >
+                  Resource URL
+                </label>
+                <input
+                  type='text'
+                  id='resourceURL'
+                  name='resourceURL'
+                  value={formData.resourceURL}
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                  placeholder='Resource URL Here'
+                />
+              </div>
 
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="resourceFile">
-              Resource File
-            </label>
-            <input
-              type="file"
-              id="resourceFile"
-              name="resourceFile"
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='resourceFile'
+                >
+                  Resource File
+                </label>
+                <input
+                  type='file'
+                  id='resourceFile'
+                  name='resourceFile'
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                />
+              </div>
 
-          <div className="flex items-start">
-            <button
-              type="button"
-              onClick={() => setCurrentStep(1)}
-              className="px-6 py-2 bg-gray-500 text-white rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            >
-              Back
-            </button>
-            <button
-              type="button"
-              onClick={() => setCurrentStep(3)}
-              className="px-6 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Next
-            </button>
-          </div>
-        </>
-      )}
+              <div className='flex justify-between'>
+                <button
+                  type='button'
+                  onClick={() => setCurrentStep(1)}
+                  className='bg-smoky-black text-white-smoke px-5 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500 text-sm'
+                >
+                  Back
+                </button>
+                <button
+                  type='button'
+                  onClick={() => setCurrentStep(3)}
+                  className='bg-palatinate-blue text-white-smoke px-5 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-palatinate-blue text-sm'
+                >
+                  Next
+                </button>
+              </div>
+            </>
+          )}
 
-      {currentStep === 3 && (
-        <>
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="subjectType">
-              Subject Type
-            </label>
-            <select
-              id="subjectType"
-              name="subjectType"
-              required
-              value={formData.subjectType}
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="Course">Course</option>
-              <option value="Lab">Lab</option>
-            </select>
-          </div>
+          {currentStep === 3 && (
+            <>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='subjectType'
+                >
+                  Subject Type
+                </label>
+                <select
+                  id='subjectType'
+                  name='subjectType'
+                  required
+                  value={formData.subjectType}
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                >
+                  <option value='Course'>Course</option>
+                  <option value='Lab'>Lab</option>
+                </select>
+              </div>
 
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="subject">
-              Subject
-            </label>
-            <select
-              id="subject"
-              name="subject"
-              required
-              value={formData.subject}
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">Select Subject</option>
-              {availableSubjects.map((subject) => (
-                <option key={subject} value={subject}>
-                  {subject}
-                </option>
-              ))}
-            </select>
-          </div>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='subject'
+                >
+                  Subject
+                </label>
+                <select
+                  id='subject'
+                  name='subject'
+                  required
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                >
+                  <option value=''>Select Subject</option>
+                  {availableSubjects.map((subject) => (
+                    <option key={subject} value={subject}>
+                      {subject}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-          <div className="mb-6">
-            <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="uploadedBy">
-              Uploaded By
-            </label>
-            <select
-              id="uploadedBy"
-              name="uploadedBy"
-              required
-              value={formData.uploadedBy}
-              onChange={handleChange}
-              className="w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">Select User</option>
-              {users.map((user) => (
-                <option key={user} value={user}>
-                  {user}
-                </option>
-              ))}
-            </select>
-          </div>
+              <div className='mb-6'>
+                <label
+                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                  htmlFor='uploadedBy'
+                >
+                  Uploaded By
+                </label>
+                <select
+                  id='uploadedBy'
+                  name='uploadedBy'
+                  required
+                  value={formData.uploadedBy}
+                  onChange={handleChange}
+                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                >
+                  <option value=''>Select User</option>
+                  {users.map((user) => (
+                    <option key={user} value={user}>
+                      {user}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-          <div className="flex items-start">
-            <button
-              type="button"
-              onClick={() => setCurrentStep(2)}
-              className="px-6 py-2 bg-gray-500 text-white rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            >
-              Back
-            </button>
-            <button
-              type="submit"
-              className="px-6 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Submit
-            </button>
-          </div>
-        </>
-      )}
-    </form>
+              <div className='flex justify-between'>
+                <button
+                  type='button'
+                  onClick={() => setCurrentStep(2)}
+                  className='bg-smoky-black text-white-smoke px-7 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500 text-sm'
+                >
+                  Back
+                </button>
+                <button
+                  type='submit'
+                  className='bg-palatinate-blue text-white-smoke px-5 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-palatinate-blue text-sm'
+                >
+                  Submit
+                </button>
+              </div>
+            </>
+          )}
+        </form>
+      </div>
+    </>
   );
 }
 

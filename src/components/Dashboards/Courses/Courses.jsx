@@ -30,9 +30,9 @@ export default function CourseForm({ departments, teachers }) {
   return (
     <>
       <div>
-        <div className='flex justify-center items-center w-auto h-full bg-pale-lavender rounded-xl'>
+        <div className='flex justify-center items-center w-auto h-full bg-lavender-web rounded-xl'>
           <form
-            className='mx-auto p-6 bg-white shadow-lg rounded-lg '
+            className='mx-auto p-6 bg-white shadow-lg rounded-lg w-[400px]'
             onSubmit={handleSubmit}
           >
             <h3 className='text-2xl font-bold text-dark-imperial-blue mb-6 '>
@@ -55,7 +55,7 @@ export default function CourseForm({ departments, teachers }) {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className='w-full  px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                    className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
                     placeholder='Enter course name'
                   />
                 </div>
@@ -75,7 +75,7 @@ export default function CourseForm({ departments, teachers }) {
                     required
                     value={formData.courseCode}
                     onChange={handleChange}
-                    className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                    className='w-full px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
                     placeholder='Enter course code'
                   />
                 </div>
@@ -180,7 +180,7 @@ export default function CourseForm({ departments, teachers }) {
                     required
                     value={formData.credits}
                     onChange={handleChange}
-                    className='w-full  px-4 py-2 border border-gray-300 rounded-md text-dark-imperial-blue bg-gray-50 focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                    className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-dark-imperial-blue bg-gray-50 focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
                     placeholder='Enter course credits'
                   />
                 </div>
