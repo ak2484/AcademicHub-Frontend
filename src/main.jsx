@@ -24,6 +24,8 @@ import Collegesite from "./components/Dashboards/Collegesite/Collegesite.jsx";
 import Schedule from "./components/Dashboards/Schedule/Schedule.jsx";
 import ExperimentForm from "./components/Dashboards/Experiments/Experiments.jsx";
 import CourseForm from "./components/Dashboards/Courses/Courses.jsx";
+import AttendanceForm from './components/Dashboards/Attendance/Attendance.jsx';
+import AnnouncementPage from './components/Dashboards/Announcements/AnnouncementPage.jsx';
 
 
 
@@ -33,7 +35,17 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Dashboard1 />} />
       <Route path='schedule' element={<Schedule />} />
-      <Route path='attendance' element={<Attendance />} />
+      <Route path='attendance' element={
+    <AttendanceForm
+      students={[
+        { id: 1, name: 'John Doe' },
+        { id: 2, name: 'Jane Smith' },
+        { id: 3, name: 'Alice Johnson' },
+        { id: 4, name: 'Bob Brown' },
+      ]}
+    />
+  }
+/>
       <Route path='courses' element={<CourseForm 
       departments={["Computer Science", "Mechanical", "Electrical"]}
         teachers={["Mr. Smith", "Ms. Johnson", "Dr. Brown"]} />} />
@@ -56,8 +68,8 @@ const router = createBrowserRouter(
   labs={['Physics Lab', 'Chemistry Lab']}
   users={['Professor John', 'Dr. Smith', 'TA Alice']}
 />} />
-      <Route path='announcements' element={<Announcements />} />
-      <Route path='calendar' element={<Calendar />} />
+<Route path="announcements" element={<AnnouncementPage />} />
+<Route path='calendar' element={<Calendar />} />
       <Route path='enquiry' element={<Enquiry />} />
       <Route path='collegeSite' element={<Collegesite />} />
       {/* <Route path='' element={<} /> */}
