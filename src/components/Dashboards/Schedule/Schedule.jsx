@@ -52,20 +52,20 @@ const Schedule = () => {
 
   return (
     <div className='flex flex-col items-center justify-center p-6 bg-gray-100 '>
-      <div className='w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 overflow-x-auto'>
+      <div className='w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6 overflow-x-auto'>
         <h2 className='text-1xl font-semibold text-palatinate-blue mb-6 text-center'>
           Schedule
         </h2>
         <table className='min-w-full border-collapse border border-gray-300'>
           <thead>
             <tr className='bg-blue-100'>
-              <th className='border border-gray-300 p-3 bg-palatinate-blue text-white-smoke font-semibold text-center'>
+              <th className='border border-smoky-black p-3 bg-palatinate-blue text-white-smoke font-semibold text-center'>
                 Day/Time
               </th>
               {times.map((time, index) => (
                 <th
                   key={index}
-                  className='border border-gray-300 p-3 bg-palatinate-blue text-white-smoke font-semibold text-center'
+                  className='border border-smoky-black p-3 bg-palatinate-blue text-white-smoke font-semibold text-center'
                 >
                   {time}
                 </th>
@@ -74,7 +74,7 @@ const Schedule = () => {
           </thead>
           <tbody>
             {Object.keys(schedule).map((day) => (
-              <tr key={day} className='hover:bg-gray-100'>
+              <tr key={day} className=''>
                 <td className='border border-gray-300 p-3 text-center font-semibold text-gray-700'>
                   {day}
                 </td>
@@ -83,7 +83,7 @@ const Schedule = () => {
                   return (
                     <td
                       key={index}
-                      className='border border-gray-300 p-3 text-center'
+                      className='border border-smoky-black p-3 text-center hover:bg-lavender-web'
                     >
                       {session
                         ? session.subject

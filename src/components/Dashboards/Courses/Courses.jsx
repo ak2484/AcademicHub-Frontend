@@ -29,7 +29,7 @@ export default function CourseForm({ departments, teachers }) {
 
   return (
     <>
-      <div>
+      <div className='flex justify-center items-center'>
         <div className='flex justify-center items-center w-auto h-full bg-lavender-web rounded-xl'>
           <form
             className='mx-auto p-6 bg-white shadow-lg rounded-lg w-[400px]'
