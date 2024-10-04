@@ -10,10 +10,10 @@ export default function Layout() {
   return (
     <>
       <DashNavBar />
-      <div className='flex'>
+      <div className='flex w-full'>
         <SideBar />
         {isRoutedToMyComponent ? (
-          <div className='flex w-full  bg-white-smoke '>
+          <div className='flex w-full bg-white-smoke '>
             <Outlet />
           </div>
         ) : (

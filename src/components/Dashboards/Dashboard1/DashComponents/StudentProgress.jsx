@@ -20,9 +20,9 @@ const marksData = [
 
 const StudentProgress = () => {
   return (
-    <div className='m-4 flex justify-start items-center bg-white-smoke w-full'>
-      <div className='bg-white shadow-lg rounded-lg p-6 w-full md:w-3/4 lg:w-1/2'>
-        <h1 className='text-2xl font-bold mb-6 text-center text-gray-800'>
+    <div className='flex items-center m-2 w-[900px] bg-white-smoke  shadow-sm shadow-smoky-black rounded-xl'>
+      <div className=' p-6 w-full text-dark-imperial-blue'>
+        <h1 className='text-2xl font-bold mb-6 text-center '>
           Student Progress Tracker
         </h1>
 

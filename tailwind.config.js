@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      "palatinate-blue": "#2c2cffff",
+      "palatinate-blue": "#2c2cff",
       "risd-blue": "#5757ffff",
       "medium-slate-blue": "#6f6ff2ff",
       "tropical-indigo": "#8282ffff",
