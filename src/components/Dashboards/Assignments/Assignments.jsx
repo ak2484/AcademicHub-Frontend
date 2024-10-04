@@ -202,13 +202,13 @@ export default function AssignmentForm({ courses, labs }) {
   };
 
   return (
-    <div className='flex justify-center items-center min-h-[80vh] bg-lavender-web rounded-lg'>
+    <div className='flex justify-center items-center min-h-screen'>
       <form
-        className='mx-auto p-8 bg-white shadow-lg rounded-lg w-[400px]'
+        className='mx-auto p-8 bg-lavender-web shadow-lg rounded-lg w-[400px]'
         onSubmit={handleSubmit}
       >
         {renderStep()}
-        <div className='flex justify-between mt-5'>
+        <div className='flex  justify-between mt-5'>
           {currentStep > 1 && (
             <button
               type='button'
