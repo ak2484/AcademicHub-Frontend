@@ -12,7 +12,7 @@ export default function AssignmentForm({ courses, labs }) {
     marks: "",
   });
 
-  const [currentStep, setCurrentStep] = useState(1); // Tracks the current step
+  const [currentStep, setCurrentStep] = useState(1);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +32,6 @@ export default function AssignmentForm({ courses, labs }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Submit the form data
     console.log(formData);
   };
 
@@ -43,56 +42,56 @@ export default function AssignmentForm({ courses, labs }) {
       case 1:
         return (
           <>
-            <div className='justify-center w-auto bg-lavender-web rounded-xl'>
-              <h2 className='font-bold text-palatinate-blue text-sm mb-4'>
-                Basic Assignment Information
-              </h2>
-              <div className='mb-4'>
-                <label
-                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
-                  htmlFor='name'
-                >
-                  Assignment Name
-                </label>
-                <input
-                  type='text'
-                  id='name'
-                  name='name'
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-                />
-              </div>
+            <h3 className='text-2xl font-semibold text-dark-imperial-blue mb-6'>
+              Basic Assignment Information
+            </h3>
+            <div className='mb-4'>
+              <label
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
+                htmlFor='name'
+              >
+                Assignment Name
+              </label>
+              <input
+                type='text'
+                id='name'
+                name='name'
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                placeholder='Enter assignment name'
+              />
+            </div>
 
-              <div className='mb-4'>
-                <label
-                  className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
-                  htmlFor='instruction'
-                >
-                  Instructions
-                </label>
-                <textarea
-                  id='instruction'
-                  name='instruction'
-                  required
-                  value={formData.instruction}
-                  onChange={handleChange}
-                  className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-                />
-              </div>
+            <div className='mb-4'>
+              <label
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
+                htmlFor='instruction'
+              >
+                Instructions
+              </label>
+              <textarea
+                id='instruction'
+                name='instruction'
+                required
+                value={formData.instruction}
+                onChange={handleChange}
+                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                placeholder='Enter instructions'
+              />
             </div>
           </>
         );
       case 2:
         return (
           <>
-            <h2 className='font-bold text-palatinate-blue text-sm mb-4'>
+            <h3 className='text-2xl font-semibold text-dark-imperial-blue mb-6'>
               Assignment Dates
-            </h2>
+            </h3>
             <div className='mb-4'>
               <label
-                className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
                 htmlFor='dateOfPerformance'
               >
                 Date of Performance
@@ -104,13 +103,13 @@ export default function AssignmentForm({ courses, labs }) {
                 required
                 value={formData.dateOfPerformance}
                 onChange={handleChange}
-                className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               />
             </div>
 
             <div className='mb-4'>
               <label
-                className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
                 htmlFor='dateOfSubmission'
               >
                 Date of Submission
@@ -122,7 +121,7 @@ export default function AssignmentForm({ courses, labs }) {
                 required
                 value={formData.dateOfSubmission}
                 onChange={handleChange}
-                className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               />
             </div>
           </>
@@ -130,12 +129,12 @@ export default function AssignmentForm({ courses, labs }) {
       case 3:
         return (
           <>
-            <h2 className='font-bold text-palatinate-blue text-sm mb-4'>
+            <h3 className='text-2xl font-semibold text-dark-imperial-blue mb-6'>
               Subject & Marks
-            </h2>
+            </h3>
             <div className='mb-4'>
               <label
-                className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
                 htmlFor='subjectType'
               >
                 Subject Type
@@ -146,7 +145,7 @@ export default function AssignmentForm({ courses, labs }) {
                 required
                 value={formData.subjectType}
                 onChange={handleChange}
-                className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               >
                 <option value='Course'>Course</option>
                 <option value='Lab'>Lab</option>
@@ -155,7 +154,7 @@ export default function AssignmentForm({ courses, labs }) {
 
             <div className='mb-4'>
               <label
-                className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
                 htmlFor='subject'
               >
                 Subject
@@ -166,7 +165,7 @@ export default function AssignmentForm({ courses, labs }) {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               >
                 <option value=''>Select Subject</option>
                 {availableSubjects.map((subject) => (
@@ -179,7 +178,7 @@ export default function AssignmentForm({ courses, labs }) {
 
             <div className='mb-4'>
               <label
-                className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+                className='block text-dark-imperial-blue text-sm font-medium mb-2'
                 htmlFor='marks'
               >
                 Marks
@@ -191,7 +190,8 @@ export default function AssignmentForm({ courses, labs }) {
                 required
                 value={formData.marks}
                 onChange={handleChange}
-                className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                placeholder='Enter marks'
               />
             </div>
           </>
@@ -202,39 +202,41 @@ export default function AssignmentForm({ courses, labs }) {
   };
 
   return (
-    <form
-      className='mx-auto p-6 bg-white shadow-lg rounded-lg'
-      onSubmit={handleSubmit}
-    >
-      {renderStep()}
-      <div className='flex justify-between mt-5'>
-        {currentStep > 1 && (
-          <button
-            type='button'
-            onClick={handlePrevStep}
-            className='px-6 py-2 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600'
-          >
-            Previous
-          </button>
-        )}
-        {currentStep < 3 ? (
-          <button
-            type='button'
-            onClick={handleNextStep}
-            className='px-6 py-2 bg-palatinate-blue text-white font-semibold rounded-full hover:bg-blue-700'
-          >
-            Next
-          </button>
-        ) : (
-          <button
-            type='submit'
-            className='px-6 py-2 bg-palatinate-blue text-white font-semibold rounded-full hover:bg-blue-700'
-          >
-            Submit
-          </button>
-        )}
-      </div>
-    </form>
+    <div className='flex justify-center items-center min-h-[80vh] bg-lavender-web rounded-lg'>
+      <form
+        className='mx-auto p-8 bg-white shadow-lg rounded-lg w-[400px]'
+        onSubmit={handleSubmit}
+      >
+        {renderStep()}
+        <div className='flex justify-between mt-5'>
+          {currentStep > 1 && (
+            <button
+              type='button'
+              onClick={handlePrevStep}
+              className='bg-smoky-black text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-gray-500'
+            >
+              Previous
+            </button>
+          )}
+          {currentStep < 3 ? (
+            <button
+              type='button'
+              onClick={handleNextStep}
+              className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palatinate-blue'
+            >
+              Next
+            </button>
+          ) : (
+            <button
+              type='submit'
+              className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palatinate-blue'
+            >
+              Submit
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
   );
 }
 

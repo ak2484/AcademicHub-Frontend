@@ -47,84 +47,87 @@ export default function ExamForm({ courses, labs }) {
       case 1:
         return (
           <>
-            <div className=' bg-lavender-web rounded-xl'>
-              <div className='mb-4'>
-                <label
-                  className=' text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='name'
-                >
-                  Exam Name
-                </label>
-                <input
-                  type='text'
-                  id='name'
-                  name='name'
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
-                />
-              </div>
+            <h3 className='text-2xl font-bold text-dark-imperial-blue mb-6'>
+              Exam Information
+            </h3>
+            <div className='mb-4'>
+              <label
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
+                htmlFor='name'
+              >
+                Exam Name
+              </label>
+              <input
+                type='text'
+                id='name'
+                name='name'
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className='w-full px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                placeholder='Enter exam name'
+              />
+            </div>
 
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='description'
-                >
-                  Description
-                </label>
-                <textarea
-                  id='description'
-                  name='description'
-                  value={formData.description}
-                  onChange={handleChange}
-                  className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
-                />
-              </div>
+            <div className='mb-4'>
+              <label
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
+                htmlFor='description'
+              >
+                Description
+              </label>
+              <textarea
+                id='description'
+                name='description'
+                value={formData.description}
+                onChange={handleChange}
+                className='w-full px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                placeholder='Enter description'
+              />
+            </div>
 
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='subjectType'
-                >
-                  Subject Type
-                </label>
-                <select
-                  id='subjectType'
-                  name='subjectType'
-                  required
-                  value={formData.subjectType}
-                  onChange={handleChange}
-                  className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
-                >
-                  <option value='Course'>Course</option>
-                  <option value='Lab'>Lab</option>
-                </select>
-              </div>
+            <div className='mb-4'>
+              <label
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
+                htmlFor='subjectType'
+              >
+                Subject Type
+              </label>
+              <select
+                id='subjectType'
+                name='subjectType'
+                required
+                value={formData.subjectType}
+                onChange={handleChange}
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+              >
+                <option value='Course'>Course</option>
+                <option value='Lab'>Lab</option>
+              </select>
+            </div>
 
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='subject'
-                >
-                  Subject
-                </label>
-                <select
-                  id='subject'
-                  name='subject'
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
-                >
-                  <option value=''>Select Subject</option>
-                  {availableSubjects.map((subject) => (
-                    <option key={subject} value={subject}>
-                      {subject}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            <div className='mb-4'>
+              <label
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
+                htmlFor='subject'
+              >
+                Subject
+              </label>
+              <select
+                id='subject'
+                name='subject'
+                required
+                value={formData.subject}
+                onChange={handleChange}
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+              >
+                <option value=''>Select Subject</option>
+                {availableSubjects.map((subject) => (
+                  <option key={subject} value={subject}>
+                    {subject}
+                  </option>
+                ))}
+              </select>
             </div>
           </>
         );
@@ -132,9 +135,12 @@ export default function ExamForm({ courses, labs }) {
       case 2:
         return (
           <>
+            <h3 className='text-2xl font-bold text-dark-imperial-blue mb-6'>
+              Exam Dates & Details
+            </h3>
             <div className='mb-4'>
               <label
-                className='block text-gray-700 text-sm font-bold mb-2'
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='year'
               >
                 Year
@@ -145,7 +151,7 @@ export default function ExamForm({ courses, labs }) {
                 required
                 value={formData.year}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               >
                 <option value=''>Select Year</option>
                 {years.map((year) => (
@@ -158,7 +164,7 @@ export default function ExamForm({ courses, labs }) {
 
             <div className='mb-4'>
               <label
-                className='block text-gray-700 text-sm font-bold mb-2'
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='semester'
               >
                 Semester
@@ -169,7 +175,7 @@ export default function ExamForm({ courses, labs }) {
                 required
                 value={formData.semester}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               >
                 <option value=''>Select Semester</option>
                 {semesters.map((semester) => (
@@ -182,7 +188,7 @@ export default function ExamForm({ courses, labs }) {
 
             <div className='mb-4'>
               <label
-                className='block text-gray-700 text-sm font-bold mb-2'
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='examDate'
               >
                 Exam Date
@@ -194,7 +200,7 @@ export default function ExamForm({ courses, labs }) {
                 required
                 value={formData.examDate}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               />
             </div>
           </>
@@ -203,9 +209,12 @@ export default function ExamForm({ courses, labs }) {
       case 3:
         return (
           <>
+            <h3 className='text-2xl font-bold text-dark-imperial-blue mb-6'>
+              Marks & Timing
+            </h3>
             <div className='mb-4'>
               <label
-                className='block text-gray-700 text-sm font-bold mb-2'
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='marks'
               >
                 Marks
@@ -217,13 +226,14 @@ export default function ExamForm({ courses, labs }) {
                 required
                 value={formData.marks}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                placeholder='Enter marks'
               />
             </div>
 
             <div className='mb-4'>
               <label
-                className='block text-gray-700 text-sm font-bold mb-2'
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='startTime'
               >
                 Start Time
@@ -235,13 +245,13 @@ export default function ExamForm({ courses, labs }) {
                 required
                 value={formData.startTime}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               />
             </div>
 
             <div className='mb-4'>
               <label
-                className='block text-gray-700 text-sm font-bold mb-2'
+                className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='endTime'
               >
                 End Time
@@ -253,7 +263,7 @@ export default function ExamForm({ courses, labs }) {
                 required
                 value={formData.endTime}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-md text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               />
             </div>
           </>
@@ -266,17 +276,17 @@ export default function ExamForm({ courses, labs }) {
 
   return (
     <form
-      className='max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg'
+      className='max-w-xl mx-auto p-6 bg-lavender-web shadow-lg rounded-lg'
       onSubmit={handleSubmit}
     >
       {renderStep()}
 
-      <div className='flex justify-between mt-4 '>
+      <div className='flex justify-between mt-6'>
         {currentStep > 1 && (
           <button
             type='button'
             onClick={() => setCurrentStep((prev) => prev - 1)}
-            className='px-4 py-2 bg-gray-400 text-white rounded-md hover:bg-gray-500 focus:outline-none focus:ring'
+            className='px-5 py-2 bg-gray-400 text-white font-semibold rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500'
           >
             Previous
           </button>
@@ -285,14 +295,14 @@ export default function ExamForm({ courses, labs }) {
           <button
             type='button'
             onClick={() => setCurrentStep((prev) => prev + 1)}
-            className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring'
+            className='px-5 py-2 bg-palatinate-blue text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
           >
             Next
           </button>
         ) : (
           <button
             type='submit'
-            className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring'
+            className='px-5 py-2 bg-palatinate-blue text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
           >
             Submit
           </button>
