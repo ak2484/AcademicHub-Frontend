@@ -26,6 +26,7 @@ import ExperimentForm from "./components/Dashboards/Experiments/Experiments.jsx"
 import CourseForm from "./components/Dashboards/Courses/Courses.jsx";
 import AttendanceForm from "./components/Dashboards/Attendance/Attendance.jsx";
 import AnnouncementPage from "./components/Dashboards/Announcements/AnnouncementPage.jsx";
+import { LoginForm } from "./components/Forms/AuthorizationForms.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -108,6 +109,8 @@ const router = createBrowserRouter(
       <Route path='calendar' element={<Calendar />} />
       <Route path='enquiry' element={<Enquiry />} />
       <Route path='collegeSite' element={<Collegesite />} />
+      <Route path='loginForm' element={<LoginForm />} />
+      {/* <Route path='errorPage' element={<ErrorPage errorType={401} />} /> */}
       {/* <Route path='' element={<} /> */}
     </Route>
   )
