@@ -48,7 +48,7 @@ function AttendancePieChart({ presentDays, totalDays }) {
   }, [presentDays, totalDays]);
 
   return (
-    <div className='bg-white-smoke w-[500px]  rounded-xl shadow-sm shadow-smoky-black m-2'>
+    <div className='bg-white-smoke w-[330px]  rounded-xl shadow-sm shadow-smoky-black m-2'>
       <h1 className='text-center text-2xl font-bold  text-dark-imperial-blue'>
         Attendance: {presentPercentage}%
       </h1>
