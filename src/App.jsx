@@ -4,7 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom"; // Import Router and Routes
-import { Navbar, HeroSection, Footer } from "./pages/LandingPage.jsx";
+
 import AdminDashboard from "./components/Dashboards/AdminDashboard.jsx";
 import SystemAdminDashboard from "./components/Dashboards/SystemAdminDashboard.jsx";
 import TeachingStaffDashboard from "./components/Dashboards/TeachingStaffDashboard.jsx";
@@ -14,8 +14,9 @@ import {
   EnrollForm,
   LoginForm,
 } from "./components/Forms/AuthorizationForms.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
 
-const App = () => {
+export default function App() {
   const location = useLocation();
 
   // Define a boolean that checks if the current path is the root ---> means Landing page will shown
@@ -24,45 +25,43 @@ const App = () => {
   return (
     <>
       {/* Conditionally render Landing Page components */}
-      {isLandingPageVisible && (
+      {/* {isLandingPageVisible && (
         <>
-          <Navbar />
-          <HeroSection />
-          <Footer />
-          <StudentDashboard />
+          <LandingPage />
         </>
-      )}
-      
+      )} */}
 
       {/* Define Routes */}
       <div>
         <Routes>
           {/* Remove this line if you don't have a Home component */}
           {/* <Route path="/home" element={<Home />} /> */}
-          <Route path='/login' element={<LoginForm />} />
-          <Route path='/enroll' element={<EnrollForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/enroll" element={<EnrollForm />} />
 
           {/* RoleBased User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}
-          <Route path='/system-admin' element={<SystemAdminDashboard />} />
-          <Route path='/admin' element={<AdminDashboard />} />
-          <Route path='/admin' element={<AdminDashboard />} />
-          <Route path='/teaching-staff' element={<TeachingStaffDashboard />} />
+          <Route path="/system-admin" element={<SystemAdminDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/teaching-staff" element={<TeachingStaffDashboard />} />
           <Route
-            path='/non-teaching-staff'
+            path="/non-teaching-staff"
             element={<NonTeachingStaffDashboard />}
           />
-          <Route path='/student' element={<StudentDashboard />} />
+          <Route path="/student" element={<StudentDashboard />} />
         </Routes>
       </div>
+      <LandingPage />
     </>
   );
-};
+}
 
 // Wrap App in Router for routing
-const MainApp = () => (
-  <Router>
-    <App />
-  </Router>
-);
+// const MainApp = () => (
+//   <Router>
+//     <App />
+//     <LandingPage />
+//   </Router>
+// );
 
-export default MainApp;
+// export default MainApp;
