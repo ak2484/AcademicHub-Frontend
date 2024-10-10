@@ -39,7 +39,7 @@ const App = () => {
         <Routes>
           {/* Remove this line if you don't have a Home component */}
           {/* <Route path="/home" element={<Home />} /> */}
-          <Route path='/login' element={<LoginForm />} />
+          <Route path='/login' element={<LoginForm/>} />
           <Route path='/enroll' element={<EnrollForm />} />
 
           {/* RoleBased User Assign Karna ha logic k liye backend lagegaaa toh baad me karta hu*/}

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Outlet, useLocation } from "react-router-dom";
 import DashNavBar from "./components/Dashboards/DashNavBar/DashNavBar";
 import SideBar from "./components/Dashboards/SideBar/SideBar";
