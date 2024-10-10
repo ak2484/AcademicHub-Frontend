@@ -29,7 +29,7 @@ const EnquiryPage = () => {
 
     // Show submission status
     setFormStatus("Your enquiry has been submitted successfully!");
-    
+
     // Reset form
     setFormData({
       name: "",
@@ -40,92 +40,103 @@ const EnquiryPage = () => {
   };
 
   return (
-    <div className="m-4 flex justify-center items-center bg-gray-100 w-full min-h-screen">
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-3/4 lg:w-1/2">
-        <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
-          Enquiry Form
-        </h1>
-        
+    <div className='m-4  w-auto bg-lavender-web rounded-xl shadow-xl '>
+      <h1 className='text-2xl font-bold mt-6 text-center text-dark-imperial-blue'>
+        Enquiry Form
+      </h1>
+      <div className='bg-white flex justify-center items-center w-full shadow-lg rounded-lg p-4  bg-lavender-web '>
         {formStatus && (
-          <div className="mb-4 p-3 text-center text-green-600 bg-green-100 rounded-lg">
+          <div className='mb-4 p-3 text-center text-green-600 bg-green-100 rounded-lg'>
             {formStatus}
           </div>
         )}
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='mx-auto p-6  w-[400px]'>
           {/* Student Name */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
+          <div className='mb-4'>
+            <label
+              className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+              htmlFor='name'
+            >
               Name
             </label>
             <input
-              type="text"
-              id="name"
-              name="name"
+              type='text'
+              id='name'
+              name='name'
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               required
-              placeholder="Enter your name"
+              placeholder='Enter your name'
             />
           </div>
 
           {/* Student Email */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+          <div className='mb-4'>
+            <label
+              className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+              htmlFor='email'
+            >
               Email
             </label>
             <input
-              type="email"
-              id="email"
-              name="email"
+              type='email'
+              id='email'
+              name='email'
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               required
-              placeholder="Enter your email"
+              placeholder='Enter your email'
             />
           </div>
 
           {/* Subject */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="subject">
+          <div className='mb-4'>
+            <label
+              className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+              htmlFor='subject'
+            >
               Subject
             </label>
             <input
-              type="text"
-              id="subject"
-              name="subject"
+              type='text'
+              id='subject'
+              name='subject'
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               required
-              placeholder="Enter the subject of your enquiry"
+              placeholder='Enter the subject of your enquiry'
             />
           </div>
 
           {/* Message */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="message">
+          <div className='mb-4'>
+            <label
+              className='block text-dark-imperial-blue text-sm font-semibold mb-2 '
+              htmlFor='message'
+            >
               Message
             </label>
             <textarea
-              id="message"
-              name="message"
+              id='message'
+              name='message'
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className='w-full  px-4 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white-smoke focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
               required
-              rows="5"
-              placeholder="Write your enquiry here"
+              rows='5'
+              placeholder='Write your enquiry here'
             ></textarea>
           </div>
 
           {/* Submit Button */}
-          <div className="text-center">
+          <div className='text-center'>
             <button
-              type="submit"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+              type='submit'
+              className='bg-palatinate-blue text-white-smoke px-5 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-palatinate-blue text-sm'
             >
               Submit Enquiry
             </button>
@@ -138,13 +149,7 @@ const EnquiryPage = () => {
 
 export default EnquiryPage;
 
-
-
-
-
-
-
-// Backend 
+// Backend
 // const handleSubmit = (e) => {
 //   e.preventDefault();
 
