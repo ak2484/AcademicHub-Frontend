@@ -32,7 +32,7 @@ export default function CourseForm({ departments, teachers }) {
       <div className='flex justify-center items-center'>
         <div className='flex justify-center items-center w-auto h-full bg-lavender-web rounded-xl'>
           <form
-            className='mx-auto p-6 bg-white shadow-lg rounded-lg w-[400px]'
+            className='mx-auto p-6 shadow-lg rounded-lg w-[400px]'
             onSubmit={handleSubmit}
           >
             <h3 className='text-2xl font-bold text-dark-imperial-blue mb-6 '>

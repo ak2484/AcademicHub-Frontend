@@ -321,8 +321,6 @@ export default function Kamal() {
     onClick={() => console.log('Exam Score Card Clicked')}
   />
   <ExamScore score={sampleScore} />
-      
-
   
 
       <b>Authorization Forms</b>
