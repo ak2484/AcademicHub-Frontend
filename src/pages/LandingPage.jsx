@@ -67,7 +67,7 @@ const Footer = () => {
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
-    <div className="lg:flex md:flex-warp items-center justify-center lg:mt-10 bg-white-smoke">
+    <div className="lg:flex md:flex-warp items-center justify-center lg:mt-10 bg-white-smoke py-7">
       <div className="w-[60%] mt-0 h-auto mx-7">
         <h1 className="font-serif text-[2.5rem] text-smoky-black font-medium tracking-wide flex flex-col">
           <span className="text-palatinate-blue text-[3rem]">AcademicHub.</span>

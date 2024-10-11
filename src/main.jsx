@@ -32,7 +32,7 @@ import LandingPage from "./pages/LandingPage.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="" element={<LandingPage />} />
+      <Route path="d" element={<LandingPage />} />
       <Route path="" element={<Dashboard1 />} />
       <Route path="schedule" element={<Schedule />} />
       <Route
