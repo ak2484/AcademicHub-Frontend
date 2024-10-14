@@ -1,13 +1,13 @@
 // Error page for different errors
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const ErrorPage = ({ errorType }) => {
-  const navigate = useNavigate(); // Initialize navigate
+  // const navigate = useNavigate(); // Initialize navigate
 
-  const handleLoginInClick = () => {
-    navigate("/loginForm"); // Navigate to the Sign In page
-  };
+  // const handleLoginInClick = () => {
+  //   navigate("loginForm"); // Navigate to the Sign In page
+  // };
 
   let errorMessage;
 
@@ -37,9 +37,9 @@ const ErrorPage = ({ errorType }) => {
         <button
           href='/home'
           className='mt-8 inline-block px-4 py-2 bg-palatinate-blue text-white-smoke rounded-full hover:bg-powder-blue'
-          onClick={handleLoginInClick} //Check How to
+          // onClick={handleLoginInClick} //Check How to
         >
-          Login In
+          <NavLink to='loginForm'>Login In</NavLink>
         </button>
       </div>
     </div>
