@@ -67,17 +67,10 @@ const Footer = () => {
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
-<<<<<<< HEAD
-    <div className="lg:flex md:flex-warp items-center justify-center lg:mt-10 bg-white-smoke py-7">
-      <div className="w-[60%] mt-0 h-auto mx-7">
-        <h1 className="font-serif text-[2.5rem] text-smoky-black font-medium tracking-wide flex flex-col">
-          <span className="text-palatinate-blue text-[3rem]">AcademicHub.</span>
-=======
     <div className='lg:flex md:flex-warp items-center justify-center py-4 bg-white-smoke'>
       <div className='w-[60%] mt-0 h-auto mx-7'>
         <h1 className='font-serif text-[2.5rem] text-smoky-black font-medium tracking-wide flex flex-col'>
           <span className='text-palatinate-blue text-[3rem]'>AcademicHub.</span>
->>>>>>> 239b6081f89dea5053eaa28c26950dc8df9f85b0
           A versatile Academic Management tool for Institutions.
         </h1>
         <div className='my-6 text-m text-sans w-[700px] text-gray'>
