@@ -7,7 +7,9 @@ import ErrorPage from "./Error/ErrorPage";
 export default function Layout() {
   const isLoggedIn = false;
   // const [activePage, setActivePage] = useState("LandingPage");
+ 
   const activePage = "LandingPage";
+  
   const location = useLocation();
   const isRoutedToMyComponent = location.pathname === "/";
   return (
