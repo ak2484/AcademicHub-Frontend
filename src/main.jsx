@@ -35,7 +35,7 @@ import AnnouncementForm from "./components/Dashboards/Announcements/Announcement
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="e" element={<LandingPage />} />
+      <Route path="" element={<LandingPage />} />
       <Route path="" element={<Dashboard1 />} />
       <Route path="schedule" element={<Schedule />} />
       <Route
