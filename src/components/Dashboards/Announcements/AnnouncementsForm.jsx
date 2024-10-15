@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AnnouncementForm = ({ handleAnnouncementSubmit }) => {
+const AnnouncementForm = ({ handleAnnouncementSubmit, onAdd, onCancel }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -12,6 +12,7 @@ const AnnouncementForm = ({ handleAnnouncementSubmit }) => {
         content,
         date: new Date().toLocaleDateString(),
       });
+      onAdd({ title, content });
       setTitle("");
       setContent("");
     }
@@ -52,6 +53,13 @@ const AnnouncementForm = ({ handleAnnouncementSubmit }) => {
         ></textarea>
       </div>
       <div className='text-center'>
+        <button
+          type='button'
+          className='mr-2 px-4 py-2 bg-gray-300 rounded'
+          onClick={onCancel}
+        >
+          Cancel
+        </button>
         <button
           type='submit'
           className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palatinate-blue hover:bg-blue-700 transition duration-300'

@@ -34,12 +34,12 @@ import AnnouncementForm from "./components/Dashboards/Announcements/Announcement
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path="" element={<LandingPage />} />
-      <Route path="" element={<Dashboard1 />} />
-      <Route path="schedule" element={<Schedule />} />
+    <Route path='/' element={<Layout />}>
+      <Route path='e' element={<LandingPage />} />
+      <Route path='' element={<Dashboard1 />} />
+      <Route path='schedule' element={<Schedule />} />
       <Route
-        path="attendance"
+        path='attendance'
         element={
           <AttendanceForm
             students={[
@@ -52,7 +52,7 @@ const router = createBrowserRouter(
         }
       />
       <Route
-        path="courses"
+        path='courses'
         element={
           <CourseForm
             departments={["Computer Science", "Mechanical", "Electrical"]}
@@ -62,7 +62,7 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="labs"
+        path='labs'
         element={
           <LabForm
             courses={["Computer Science 101", "Physics 201", "Chemistry 301"]}
@@ -74,7 +74,7 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="assignments"
+        path='assignments'
         element={
           <AssignmentForm
             courses={["Math 101", "Physics 202", "Chemistry 303"]}
@@ -83,7 +83,7 @@ const router = createBrowserRouter(
         }
       />
       <Route
-        path="experiments"
+        path='experiments'
         element={
           <ExperimentForm
             labs={["Physics Lab", "Chemistry Lab", "Biology Lab"]}
@@ -91,7 +91,7 @@ const router = createBrowserRouter(
         }
       />
       <Route
-        path="exams"
+        path='exams'
         element={
           <Exams
             courses={["Math 101", "Physics 202", "Chemistry 303"]}
@@ -101,7 +101,7 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="resources"
+        path='resources'
         element={
           <ResourceForm
             courses={["Math 101", "Physics 201"]}
@@ -110,7 +110,7 @@ const router = createBrowserRouter(
           />
         }
       />
-      <Route path="announcements" element={<Announcements />} />
+      <Route path='announcements' element={<Announcements />} />
       {/* <Route
         path='announcementForm'
         element={
@@ -119,11 +119,11 @@ const router = createBrowserRouter(
           />
         }
       /> */}
-      <Route path="calendar" element={<Calendar />} />
-      <Route path="enquiry" element={<Enquiry />} />
-      <Route path="collegeSite" element={<Collegesite />} />
-      <Route path="loginForm" element={<LoginForm />} />
-      <Route path="enrollForm" element={<EnrollForm />} />
+      <Route path='calendar' element={<Calendar />} />
+      <Route path='enquiry' element={<Enquiry />} />
+      <Route path='collegeSite' element={<Collegesite />} />
+      <Route path='loginForm' element={<LoginForm />} />
+      <Route path='enrollForm' element={<EnrollForm />} />
       {/* <Route path='errorPage' element={<ErrorPage errorType={401} />} /> */}
       {/* <Route path='' element={<} /> */}
     </Route>
