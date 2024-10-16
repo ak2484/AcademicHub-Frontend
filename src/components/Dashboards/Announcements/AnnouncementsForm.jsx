@@ -4,13 +4,23 @@ const AnnouncementForm = ({ handleAnnouncementSubmit, onAdd, onCancel }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
+  const now = new Date();
+
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+
+  const currentTime = `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}`;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && content) {
       handleAnnouncementSubmit({
         title,
         content,
-        date: new Date().toLocaleDateString(),
+        date: now.toLocaleDateString(),
+        time: currentTime,
       });
       onAdd({ title, content });
       setTitle("");
@@ -19,9 +29,9 @@ const AnnouncementForm = ({ handleAnnouncementSubmit, onAdd, onCancel }) => {
   };
 
   return (
-    <div className='fixed inset-0 flex items-center justify-center bg-lavender-web bg-opacity-70'>
+    <div className='fixed inset-0 flex items-center justify-center bg-white-smoke bg-opacity-70'>
       <form
-        className='w-auto p-8 bg-lavender-web shadow-lg rounded-lg'
+        className='w-auto p-8 bg-lavender-web shadow-lg shadow-smoky-black rounded-lg'
         onSubmit={handleSubmit}
       >
         <h2 className='text-2xl font-bold text-dark-imperial-blue text-center mb-6'>

@@ -21,8 +21,11 @@ const AnnouncementList = ({ announcements }) => {
                   {announcement.title}
                 </h3>
                 <p className='text-gray-700 mb-2'>{announcement.content}</p>
-                <span className='text-sm text-gray-500'>
-                  Posted on {announcement.date}
+                <span className='text-sm '>
+                  Posted on{" "}
+                  <span className='font-semibold'>{announcement.date}</span>{" "}
+                  Time{" "}
+                  <span className='font-semibold'>{announcement.time}</span>
                 </span>
               </div>
             ))}

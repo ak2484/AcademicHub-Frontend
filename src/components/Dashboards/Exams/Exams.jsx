@@ -50,7 +50,7 @@ export default function ExamForm({ courses, labs }) {
             <h3 className='text-2xl font-bold text-dark-imperial-blue mb-6'>
               Exam Information
             </h3>
-            <div className='mb-4'>
+            <div className='mb-4 '>
               <label
                 className='block text-dark-imperial-blue text-sm font-semibold mb-2'
                 htmlFor='name'
@@ -276,7 +276,7 @@ export default function ExamForm({ courses, labs }) {
 
   return (
     <form
-      className='max-w-xl mx-auto p-6 bg-lavender-web shadow-lg rounded-lg'
+      className='max-w-xl mx-auto p-6 bg-lavender-web shadow-lg rounded-lg w-[400px]'
       onSubmit={handleSubmit}
     >
       {renderStep()}
@@ -286,7 +286,7 @@ export default function ExamForm({ courses, labs }) {
           <button
             type='button'
             onClick={() => setCurrentStep((prev) => prev - 1)}
-            className='px-5 py-2 bg-gray-400 text-white font-semibold rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500'
+            className='px-5 flex py-2 bg-smoky-black text-white-smoke rounded-full hover:bg-gray  focus:outline-none focus:ring-2 focus:ring-gray-500 justify-start'
           >
             Previous
           </button>
@@ -295,14 +295,14 @@ export default function ExamForm({ courses, labs }) {
           <button
             type='button'
             onClick={() => setCurrentStep((prev) => prev + 1)}
-            className='px-5 py-2 bg-palatinate-blue text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            className='flex px-10 py-2 bg-palatinate-blue text-white-smoke rounded-full hover:bg-risd-blue focus:outline-none focus:ring-2 focus:ring-blue-500 justify-end '
           >
             Next
           </button>
         ) : (
           <button
             type='submit'
-            className='px-5 py-2 bg-palatinate-blue text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            className='px-7 py-2 bg-palatinate-blue text-white-smoke rounded-full hover:bg-risd-blue focus:outline-none focus:ring-2 '
           >
             Submit
           </button>

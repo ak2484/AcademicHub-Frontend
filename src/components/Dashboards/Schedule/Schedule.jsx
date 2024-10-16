@@ -51,9 +51,9 @@ const Schedule = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center p-6 bg-gray-100 '>
-      <div className='w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6 overflow-x-auto'>
-        <h2 className='text-1xl font-semibold text-palatinate-blue mb-6 text-center'>
+    <div className='flex flex-col items-center justify-center p-6  '>
+      <div className='w-full max-w-4xl bg-lavender-web text-dark-imperial-blue rounded-2xl shadow-xl p-6 overflow-x-auto'>
+        <h2 className='text-2xl font-semibold text-palatinate-blue mb-6 text-center font-sans'>
           Schedule
         </h2>
         <table className='min-w-full border-collapse border border-gray-300'>
