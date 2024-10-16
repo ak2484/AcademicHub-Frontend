@@ -27,7 +27,8 @@ export function LoginForm() {
           password,
         },
       });
-      console.log(res);
+      console.log(email, password);
+      console.log(res.data.data.user);
     } catch (err) {
       console.log(err.response.data);
     }
