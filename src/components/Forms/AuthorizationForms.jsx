@@ -19,14 +19,17 @@ export function LoginForm() {
     try {
       e.preventDefault();
 
-      const res = await axios({
-        method: "POST",
-        url: `${API_URL}/api/v1/users/login`,
-        data: {
+      const res = await axios.post(
+        `${API_URL}/api/v1/users/login`,
+        {
           email,
           password,
         },
-      });
+        {
+          withCredentials: true,
+        }
+      );
+
       console.log(res);
     } catch (err) {
       console.log(err.response.data);
