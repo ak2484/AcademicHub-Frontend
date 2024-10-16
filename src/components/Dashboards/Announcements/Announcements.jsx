@@ -27,17 +27,8 @@ export default function Announcements() {
     setIsFormOpen(false);
   };
   return (
-    <div className='bg-white-smoke flex-col justify-center text-center p-8 '>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 '>
-        {cards.map((card) => (
-          <AnnouncementCard
-            key={card.id}
-            title={card.title}
-            content={card.content}
-          />
-        ))}
-      </div>
-      <div className=' container  gap-4 p-4  '>
+    <div className='flex-col justify-center text-center p-8 bg-white-smoke'>
+      <div className='flex-col pb-4 bg-white-smoke w-'>
         <AnnouncementList announcements={announcements} />
       </div>
       <div>
@@ -45,7 +36,7 @@ export default function Announcements() {
           onClick={openForm}
           className='border px-6 py-2 rounded-full bg-palatinate-blue text-white-smoke'
         >
-          <NavLink to=''>Make Announcement</NavLink>
+          Make Announcement
         </button>
       </div>
       {isFormOpen && (

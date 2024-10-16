@@ -4,18 +4,18 @@ import AnnouncementForm from "./AnnouncementsForm";
 const AnnouncementList = ({ announcements }) => {
   return (
     <>
-      <div className='p-6 bg-white rounded-lg shadow-lg w-full'>
-        <h2 className='text-2xl font-bold text-center mb-4'>Announcements</h2>
+      <div className='p-6 text-dark-imperial-blue bg-white-smoke rounded-lg shadow-lg w-[1200px] '>
+        <h2 className='text-2xl  font-bold text-center mb-4'>Announcements</h2>
         {announcements.length === 0 ? (
           <p className='text-center text-gray-600'>
             No announcements available.
           </p>
         ) : (
-          <ul className='space-y-4'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 space-y-4  '>
             {announcements.map((announcement, index) => (
-              <li
+              <div
                 key={index}
-                className='p-4 bg-gray-100 rounded-lg shadow-lg border-l-4 border-blue-500'
+                className='p-4 bg-lavender-web rounded-lg shadow-lg border-l-4 border-dark-imperial-blue  hover:scale-110'
               >
                 <h3 className='text-xl font-semibold mb-2'>
                   {announcement.title}
@@ -24,9 +24,9 @@ const AnnouncementList = ({ announcements }) => {
                 <span className='text-sm text-gray-500'>
                   Posted on {announcement.date}
                 </span>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
       </div>
     </>
