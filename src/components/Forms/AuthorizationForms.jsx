@@ -20,7 +20,7 @@ export function LoginForm() {
       e.preventDefault();
 
       const res = await axios.post(
-        `${API_URL}/api/v1/users/login`,
+        `${API_URL}/users/login`,
         {
           email,
           password,
