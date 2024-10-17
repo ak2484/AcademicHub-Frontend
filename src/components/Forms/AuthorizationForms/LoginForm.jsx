@@ -2,6 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../../constants";
 
+import { activePageFunction } from "../../../constants";
+import { NavLink, useNavigate } from "react-router-dom";
+
 // LoginForm for students
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -26,10 +29,13 @@ export default function LoginForm() {
         },
       });
       console.log(res);
+      navigate("/layout");
     } catch (error) {
       console.log(error.response.data);
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <>

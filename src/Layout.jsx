@@ -11,7 +11,7 @@ export default function Layout() {
   // const [activePage, setActivePage] = useState("LandingPage");
   const activePage = "LandingPage";
   const location = useLocation();
-  const isRoutedToMyComponent = location.pathname === "/";
+  const isRoutedToMyComponent = location.pathname === "/layout";
 
   const [user, setUser] = useState({
     userType: "Student",
@@ -40,30 +40,21 @@ export default function Layout() {
 
   return (
     <>
-      {activePage === "LandingPag" ? (
-        <>
-          {/* <ErrorPage errorType={401} /> */}
-          <Outlet />
-        </>
-      ) : (
-        <>
-          <div className="sticky top-0 z-10">
-            <DashNavBar user={user} />
+      <div className='sticky top-0 z-10'>
+        <DashNavBar user={user} />
+      </div>
+      <div className='flex w-full'>
+        <SideBar />
+        {isRoutedToMyComponent ? (
+          <div className='flex w-full bg-white-smoke '>
+            <Outlet />
           </div>
-          <div className="flex w-full">
-            <SideBar user={user} />
-            {isRoutedToMyComponent ? (
-              <div className="flex w-full bg-white-smoke ">
-                <Outlet />
-              </div>
-            ) : (
-              <div className="flex justify-center items-center w-full  bg-white-smoke ">
-                <Outlet />
-              </div>
-            )}
-          </div>{" "}
-        </>
-      )}
+        ) : (
+          <div className='flex justify-center items-center w-full  bg-white-smoke '>
+            <Outlet />
+          </div>
+        )}
+      </div>
     </>
   );
 }
