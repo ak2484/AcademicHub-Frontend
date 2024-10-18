@@ -11,10 +11,6 @@ import SystemAdminDashboard from "./components/Dashboards/SystemAdminDashboard.j
 import TeachingStaffDashboard from "./components/Dashboards/TeachingStaffDashboard.jsx";
 import NonTeachingStaffDashboard from "./components/Dashboards/NonTeachingStaffDashboard.jsx";
 import StudentDashboard from "./components/Dashboards/StudentDashboard.jsx";
-import {
-  EnrollForm,
-  LoginForm,
-} from "./components/Forms/AuthorizationForms.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 
 export default function App() {

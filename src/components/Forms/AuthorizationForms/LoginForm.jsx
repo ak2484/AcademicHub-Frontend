@@ -8,53 +8,76 @@ import { NavLink, useNavigate } from "react-router-dom";
 // LoginForm for students
 export default function LoginForm() {
   const [email, setEmail] = useState("");
-  const [password, setPasssword] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleEmailInput = (e) => {
     setEmail(e.target.value);
   };
   const handlePasswordInput = (e) => {
-    setPasssword(e.target.value);
+    setPassword(e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios({
-        method: "POST",
-        url: `${API_URL}/api/v1/users/login`,
-        data: {
-          email,
-          password,
-        },
+      const res = await axios.post(`${API_URL}/api/v1/users/login`, {
+        email,
+        password,
       });
-      console.log(res);
-      navigate("/layout");
+
+      console.log(res); // Log the entire response to verify it
+      if (res.status === 200 && res.data.token) {
+        console.log("Login successful!"); // Check if this line is executed
+        localStorage.setItem("token", res.data.token);
+        navigate("/layout");
+      } else {
+        console.error("Login failed:", res.data.message);
+        alert("Invalid credentials, please try again.");
+      }
     } catch (error) {
-      console.log(error.response.data);
+      console.error(
+        "Error during login:",
+        error.response ? error.response.data : error
+      );
+      alert("An error occurred during login. Please try again.");
     }
   };
 
-  const navigate = useNavigate();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await axios({
+  //       method: "POST",
+  //       url: `${API_URL}/api/v1/users/login`,
+  //       data: {
+  //         email,
+  //         password,
+  //       },
+  //     });
+  //     console.log(res);
+  //     navigate("/layout");
+  //   } catch (error) {
+  //     console.log(error.response.data);
+  //   }
+  // };
 
   return (
     <>
-      <div className='bg-white-smoke'>
-        <div className='bg-lavender-web w-full'>
-          <div className='w-full h-auto '>
-            <img
-              className='h-12 w-auto mr-2'
-              src='./src/assets/AcademicHubLogo2.png'
-              alt='logo'
-            />
-          </div>
+      <div className='bg-white-smoke '>
+        <div className='flex items-center h-screen'>
           <form
             onSubmit={handleSubmit}
-            className='max-w-md mx-auto p-6 to-blue-50 shadow-lg rounded-lg bg-lavender-web text-dark-imperial-blue '
+            className='w-[450px] mx-auto p-6 to-blue-50 shadow-md shadow-smoky-black rounded-lg bg-lavender-web text-dark-imperial-blue '
           >
-            <h2 className='text-3xl font-bold mb-6 text-blue-800 text-center'>
-              Login
-            </h2>
+            <div className='flex justify-center h-auto mb-5'>
+              <img
+                className='h-12 w-auto mr-2'
+                src='./src/assets/AcademicHubLogo2.png'
+                alt='logo'
+              />
+            </div>
 
             <div className='mb-5'>
               <label
@@ -112,3 +135,32 @@ export default function LoginForm() {
     </>
   );
 }
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   try {
+//     const res = await axios.post(`${API_URL}/api/v1/users/login`, {
+//       email,
+//       password,
+//     });
+
+//     if (res.status === 200 && res.data.token) {
+//       // Assuming the token is a sign of successful login
+//       console.log("Login successful!");
+//       // Store the token if needed
+//       localStorage.setItem("token", res.data.token);
+
+//       // Navigate to the layout
+//       navigate("/layout");
+//     } else {
+//       console.error("Login failed:", res.data.message);
+//       alert("Invalid credentials, please try again.");
+//     }
+//   } catch (error) {
+//     console.error(
+//       "Error during login:",
+//       error.response ? error.response.data : error
+//     );
+//     alert("An error occurred during login. Please try again.");
+//   }
+// };

@@ -1,4 +1,4 @@
-import { EnrollForm, LoginForm } from "./components/Forms/AuthorizationForms";
+// import { EnrollForm, LoginForm } from "./components/Forms/AuthorizationForms";
 import {
   AssignmentForm,
   ExperimentForm,
@@ -9,7 +9,10 @@ import {
   SubmissionForm,
   ResourceForm,
 } from "./components/Forms/AcademicForms";
-import { InstituteForm, DepartmentForm } from "./components/Forms/InstituteForms";
+import {
+  InstituteForm,
+  DepartmentForm,
+} from "./components/Forms/InstituteForms";
 import {
   StudentForm,
   AdminForm,
@@ -20,21 +23,65 @@ import {
 import GroupForm from "./components/Forms/GroupForm";
 
 //
-import { Exam , ExamCard , ExamScore , ExamScoreCard} from "./components/DataModelComponents/AcademicComponents/Exam.jsx";
-import { DepartmentCard , Department} from "./components/DataModelComponents/InstituteComponents/Department.jsx";
-import { CourseCard ,Course} from "./components/DataModelComponents/AcademicComponents/Course.jsx";
-import {AssignmentCard,Assignment} from "./components/DataModelComponents/AcademicComponents/Assignment.jsx";
-import {ExperimentCard , Experiment} from "./components/DataModelComponents/AcademicComponents/Experiment.jsx";
-import {LabCard , Lab} from "./components/DataModelComponents/AcademicComponents/Lab.jsx"
-import {ResourceCard , Resource} from "./components/DataModelComponents/AcademicComponents/Resource.jsx";
-import {SubmissionCard, Submission } from "./components/DataModelComponents/AcademicComponents/Submission.jsx";
-import {InstituteCard , Institute} from "./components/DataModelComponents/InstituteComponents/Institute.jsx";
+import {
+  Exam,
+  ExamCard,
+  ExamScore,
+  ExamScoreCard,
+} from "./components/DataModelComponents/AcademicComponents/Exam.jsx";
+import {
+  DepartmentCard,
+  Department,
+} from "./components/DataModelComponents/InstituteComponents/Department.jsx";
+import {
+  CourseCard,
+  Course,
+} from "./components/DataModelComponents/AcademicComponents/Course.jsx";
+import {
+  AssignmentCard,
+  Assignment,
+} from "./components/DataModelComponents/AcademicComponents/Assignment.jsx";
+import {
+  ExperimentCard,
+  Experiment,
+} from "./components/DataModelComponents/AcademicComponents/Experiment.jsx";
+import {
+  LabCard,
+  Lab,
+} from "./components/DataModelComponents/AcademicComponents/Lab.jsx";
+import {
+  ResourceCard,
+  Resource,
+} from "./components/DataModelComponents/AcademicComponents/Resource.jsx";
+import {
+  SubmissionCard,
+  Submission,
+} from "./components/DataModelComponents/AcademicComponents/Submission.jsx";
+import {
+  InstituteCard,
+  Institute,
+} from "./components/DataModelComponents/InstituteComponents/Institute.jsx";
 // import {GroupCard , Group} from "./components/DataModelComponents/UserComponents/Group.jsx";
-import {AdminCard , Admin} from "./components/DataModelComponents/UserComponents/Admin.jsx";
-import {SystemAdminCard , SystemAdmin} from "./components/DataModelComponents/UserComponents/SystemAdmin.jsx";
-import {StudentCard , Student} from "./components/DataModelComponents/UserComponents/Student.jsx";
-import {NonTeachingStaffCard , NonTeachingStaff} from "./components/DataModelComponents/UserComponents/NonTeachingStaff.jsx";
-import {TeachingStaffCard , TeachingStaff} from "./components/DataModelComponents/UserComponents/TeachingStaff.jsx";
+import {
+  AdminCard,
+  Admin,
+} from "./components/DataModelComponents/UserComponents/Admin.jsx";
+import {
+  SystemAdminCard,
+  SystemAdmin,
+} from "./components/DataModelComponents/UserComponents/SystemAdmin.jsx";
+import {
+  StudentCard,
+  Student,
+} from "./components/DataModelComponents/UserComponents/Student.jsx";
+import {
+  NonTeachingStaffCard,
+  NonTeachingStaff,
+} from "./components/DataModelComponents/UserComponents/NonTeachingStaff.jsx";
+import {
+  TeachingStaffCard,
+  TeachingStaff,
+} from "./components/DataModelComponents/UserComponents/TeachingStaff.jsx";
 
 ///---------------------DUMMY DATA FOR GROUP FORM SECTION-----------------------------------------------------///
 const dummyData = {
@@ -60,268 +107,271 @@ const dummyData = {
 ///---------------------DUMMY DATA FOR DATAMODEL SECTION-----------------------------------------------------///
 
 const sampleCourse = {
-      name: 'Introduction to Computer Science',
-      code: 'CS101',
-      department: 'Computer Science',
-      year: 1,
-      semester: 1,
-      credits: 4,
-      teachers: ['Dr. Smith', 'Prof. Johnson'],
-    };
+  name: "Introduction to Computer Science",
+  code: "CS101",
+  department: "Computer Science",
+  year: 1,
+  semester: 1,
+  credits: 4,
+  teachers: ["Dr. Smith", "Prof. Johnson"],
+};
 
 const sampleExam = {
-  name: 'Midterm Exam',
-  date: '2024-10-10',
-  course: 'Math 101',
+  name: "Midterm Exam",
+  date: "2024-10-10",
+  course: "Math 101",
   duration: 2,
   totalMarks: 100,
 };
 
 const sampleScore = {
-  studentName: 'John Doe',
-  examName: 'Midterm Exam',
-  course: 'Math 101',
+  studentName: "John Doe",
+  examName: "Midterm Exam",
+  course: "Math 101",
   marksObtained: 85,
   totalMarks: 100,
-  grade: 'A',
+  grade: "A",
 };
 
 const sampleDepartment = {
-  name: 'Computer Science',
-  headOfDepartment: 'Dr. Alice Johnson',
+  name: "Computer Science",
+  headOfDepartment: "Dr. Alice Johnson",
   facultyCount: 25,
-  courses: ['Data Structures', 'Algorithms', 'Operating Systems'],
-  faculty: ['Prof. Bob Smith', 'Prof. Charlie Brown', 'Prof. Diana Prince'],
+  courses: ["Data Structures", "Algorithms", "Operating Systems"],
+  faculty: ["Prof. Bob Smith", "Prof. Charlie Brown", "Prof. Diana Prince"],
 };
 
 const sampleGroup = {
-  name: 'Study Group',
-  description: 'A group for collaborative study sessions.',
+  name: "Study Group",
+  description: "A group for collaborative study sessions.",
   memberCount: 10,
-  creationDate: '2024-09-15',
-  members: ['Alice Johnson', 'Bob Smith', 'Charlie Brown', 'Diana Prince'],
+  creationDate: "2024-09-15",
+  members: ["Alice Johnson", "Bob Smith", "Charlie Brown", "Diana Prince"],
 };
 
 const sampleInstitute = {
-  name: 'Institute of Technology',
-  location: 'New York',
+  name: "Institute of Technology",
+  location: "New York",
   establishedYear: 1980,
   numberOfStudents: 5000,
-  departments: ['Computer Science', 'Mechanical Engineering', 'Business Administration'],
-  coursesOffered: ['Data Structures', 'Thermodynamics', 'Financial Management'],
+  departments: [
+    "Computer Science",
+    "Mechanical Engineering",
+    "Business Administration",
+  ],
+  coursesOffered: ["Data Structures", "Thermodynamics", "Financial Management"],
 };
 
-
 const sampleSubmission = {
-  title: 'Math Assignment 1',
-  studentName: 'John Doe',
-  dateOfSubmission: '2024-09-18',
-  status: 'Completed',
-  comments: 'Well done, but needs improvement on the final section.',
+  title: "Math Assignment 1",
+  studentName: "John Doe",
+  dateOfSubmission: "2024-09-18",
+  status: "Completed",
+  comments: "Well done, but needs improvement on the final section.",
   attachments: [
-    { name: 'Assignment File', link: 'https://example.com/assignment1.pdf' },
+    { name: "Assignment File", link: "https://example.com/assignment1.pdf" },
   ],
 };
 
 const sampleResource = {
-  title: 'Data Structures Lecture Notes',
-  type: 'PDF',
-  subject: 'Computer Science',
-  description: 'Comprehensive notes on data structures for CS students.',
-  uploadedBy: 'Professor Jane Doe',
-  uploadedAt: '2024-09-15',
-  link: 'https://example.com/resource.pdf',
+  title: "Data Structures Lecture Notes",
+  type: "PDF",
+  subject: "Computer Science",
+  description: "Comprehensive notes on data structures for CS students.",
+  uploadedBy: "Professor Jane Doe",
+  uploadedAt: "2024-09-15",
+  link: "https://example.com/resource.pdf",
 };
 
-  
 const sampleLab = {
-  name: 'Physics Lab',
-  department: 'Science and Engineering',
-  location: 'Building 5, Room 301',
-  equipment: ['Oscilloscope', 'Spectrometer', 'Voltmeter'],
-  supervisor: 'Dr. Jane Doe',
-  description: 'A laboratory equipped for experiments related to physics.',
+  name: "Physics Lab",
+  department: "Science and Engineering",
+  location: "Building 5, Room 301",
+  equipment: ["Oscilloscope", "Spectrometer", "Voltmeter"],
+  supervisor: "Dr. Jane Doe",
+  description: "A laboratory equipped for experiments related to physics.",
 };
-
 
 const sampleExperiment = {
-  title: 'Physics Lab Experiment 1',
-  lab: 'Physics Lab',
-  date: '2024-09-15',
-  objectives: 'To study the laws of motion.',
-  materials: 'Inclined plane, stopwatch, weights, protractor.',
-  procedure: 'Set up the inclined plane and measure the time taken by different objects to slide down the plane at different angles.',
+  title: "Physics Lab Experiment 1",
+  lab: "Physics Lab",
+  date: "2024-09-15",
+  objectives: "To study the laws of motion.",
+  materials: "Inclined plane, stopwatch, weights, protractor.",
+  procedure:
+    "Set up the inclined plane and measure the time taken by different objects to slide down the plane at different angles.",
 };
 
 const sampleAssignment = {
-      name: 'Assignment 1',
-      instruction: 'Complete the exercises from Chapter 3',
-      subject: 'Mathematics',
-      subjectType: 'Course',
-      dateOfPerformance: '2024-09-10',
-      dateOfSubmission: '2024-09-17',
-      marks: 100,
-    };
+  name: "Assignment 1",
+  instruction: "Complete the exercises from Chapter 3",
+  subject: "Mathematics",
+  subjectType: "Course",
+  dateOfPerformance: "2024-09-10",
+  dateOfSubmission: "2024-09-17",
+  marks: 100,
+};
 
+const sampleAdmin2 = {
+  name: "John Doe",
+  role: "System Administrator",
+  email: "john.doe@example.com",
+  phone: "+1 234 567 890",
+  responsibilities: [
+    "Manage user accounts",
+    "Monitor system performance",
+    "Handle technical support",
+  ],
+};
+const sampleAdmin = {
+  name: "Alice Admin",
+  id: "A987654",
+  role: "System Administrator",
+  email: "alice.admin@example.com",
+  phone: "+1 234 567 890",
+  responsibilities: [
+    "Manage system configurations",
+    "Oversee user access controls",
+    "Monitor system performance",
+    "Implement security measures",
+  ],
+};
 
-
-    const sampleAdmin2 = {
-      name: 'John Doe',
-      role: 'System Administrator',
-      email: 'john.doe@example.com',
-      phone: '+1 234 567 890',
-      responsibilities: ['Manage user accounts', 'Monitor system performance', 'Handle technical support'],
-    };
-    const sampleAdmin = {
-      name: 'Alice Admin',
-      id: 'A987654',
-      role: 'System Administrator',
-      email: 'alice.admin@example.com',
-      phone: '+1 234 567 890',
-      responsibilities: [
-        'Manage system configurations',
-        'Oversee user access controls',
-        'Monitor system performance',
-        'Implement security measures',
-      ],
-    };
-
-    const sampleStudent = {
-      name: 'John Doe',
-      id: 'S123456',
-      course: 'Computer Science',
-      email: 'john.doe@example.com',
-      phone: '+1 234 567 890',
-      grades: [
-        { subject: 'Math', score: 'A' },
-        { subject: 'Physics', score: 'B+' },
-        { subject: 'Chemistry', score: 'A-' },
-      ],
-      activities: ['Soccer Club', 'Robotics Team'],
-    };
-    const sampleNonTeachStaff = {
-      name: 'Jane Doe',
-      position: 'Librarian',
-      department: 'Library Services',
-      email: 'jane.doe@example.com',
-      phone: '+1 234 567 890',
-      responsibilities: ['Manage library resources', 'Assist students with research', 'Organize events'],
-    };
-    const sampleStaff = {
-      name: 'John Doe',
-      id: 'T123456',
-      subject: 'Mathematics',
-      email: 'john.doe@example.com',
-      phone: '+1 234 567 890',
-      qualifications: ['M.Sc. in Mathematics', 'Ph.D. in Education'],
-      responsibilities: [
-        'Teach undergraduate courses',
-        'Supervise research projects',
-        'Conduct departmental meetings',
-      ],
-    };
+const sampleStudent = {
+  name: "John Doe",
+  id: "S123456",
+  course: "Computer Science",
+  email: "john.doe@example.com",
+  phone: "+1 234 567 890",
+  grades: [
+    { subject: "Math", score: "A" },
+    { subject: "Physics", score: "B+" },
+    { subject: "Chemistry", score: "A-" },
+  ],
+  activities: ["Soccer Club", "Robotics Team"],
+};
+const sampleNonTeachStaff = {
+  name: "Jane Doe",
+  position: "Librarian",
+  department: "Library Services",
+  email: "jane.doe@example.com",
+  phone: "+1 234 567 890",
+  responsibilities: [
+    "Manage library resources",
+    "Assist students with research",
+    "Organize events",
+  ],
+};
+const sampleStaff = {
+  name: "John Doe",
+  id: "T123456",
+  subject: "Mathematics",
+  email: "john.doe@example.com",
+  phone: "+1 234 567 890",
+  qualifications: ["M.Sc. in Mathematics", "Ph.D. in Education"],
+  responsibilities: [
+    "Teach undergraduate courses",
+    "Supervise research projects",
+    "Conduct departmental meetings",
+  ],
+};
 ///---------------------MAIN FUNCTION-----------------------------------------------------///
 export default function Kamal() {
   return (
     <>
+      <TeachingStaffCard
+        staff={sampleStaff}
+        onClick={() => console.log("Teaching Staff Card Clicked")}
+      />
+      <TeachingStaff staff={sampleStaff} />
 
-<TeachingStaffCard
-    staff={sampleStaff}
-    onClick={() => console.log('Teaching Staff Card Clicked')}
-  />
-  <TeachingStaff staff={sampleStaff} />
+      <NonTeachingStaffCard
+        staff={sampleNonTeachStaff}
+        onClick={() => console.log("Non-Teaching Staff Card Clicked")}
+      />
+      <NonTeachingStaff staff={sampleNonTeachStaff} />
 
+      <StudentCard
+        student={sampleStudent}
+        onClick={() => console.log("Student Card Clicked")}
+      />
+      <Student student={sampleStudent} />
 
-<NonTeachingStaffCard
-    staff={sampleNonTeachStaff}
-    onClick={() => console.log('Non-Teaching Staff Card Clicked')}
-  />
-  <NonTeachingStaff staff={sampleNonTeachStaff} />
-  
+      <SystemAdminCard
+        admin={sampleAdmin}
+        onClick={() => console.log("System Admin Card Clicked")}
+      />
+      <SystemAdmin admin={sampleAdmin} />
 
-<StudentCard
-    student={sampleStudent}
-    onClick={() => console.log('Student Card Clicked')}
-  />
-  <Student student={sampleStudent} />
+      <AdminCard
+        admin={sampleAdmin2}
+        onClick={() => console.log("Admin Card Clicked")}
+      />
+      <Admin admin={sampleAdmin2} />
 
- <SystemAdminCard
-    admin={sampleAdmin}
-    onClick={() => console.log('System Admin Card Clicked')}
-  />
-  <SystemAdmin admin={sampleAdmin} />
+      <AssignmentCard
+        assignment={sampleAssignment}
+        onClick={() => console.log("Assignment Card Clicked")}
+      />
+      <Assignment assignment={sampleAssignment} />
 
-<AdminCard
-    admin={sampleAdmin2}
-    onClick={() => console.log('Admin Card Clicked')}
-  />
-  <Admin admin={sampleAdmin2} />
+      <ExperimentCard
+        experiment={sampleExperiment}
+        onClick={() => console.log("Experiment Card Clicked")}
+      />
+      <Experiment experiment={sampleExperiment} />
 
-<AssignmentCard
-    assignment={sampleAssignment}
-    onClick={() => console.log('Assignment Card Clicked')}
-  />
-  <Assignment assignment={sampleAssignment} />
+      <LabCard
+        lab={sampleLab}
+        onClick={() => console.log("Lab Card Clicked")}
+      />
+      <Lab lab={sampleLab} />
+      <ResourceCard
+        resource={sampleResource}
+        onClick={() => console.log("Resource Card Clicked")}
+      />
+      <Resource resource={sampleResource} />
+      <SubmissionCard
+        submission={sampleSubmission}
+        onClick={() => console.log("Submission Card Clicked")}
+      />
+      <Submission submission={sampleSubmission} />
 
-<ExperimentCard
-    experiment={sampleExperiment}
-    onClick={() => console.log('Experiment Card Clicked')}
-  />
-  <Experiment experiment={sampleExperiment} />
+      <CourseCard
+        course={sampleCourse}
+        onClick={() => console.log("Course Card Clicked")}
+      />
+      <Course course={sampleCourse} />
 
-  <LabCard
-    lab={sampleLab}
-    onClick={() => console.log('Lab Card Clicked')}
-  />
-  <Lab lab={sampleLab} />
-  <ResourceCard
-    resource={sampleResource}
-    onClick={() => console.log('Resource Card Clicked')}
-  />
-  <Resource resource={sampleResource} />
-<SubmissionCard
-    submission={sampleSubmission}
-    onClick={() => console.log('Submission Card Clicked')}
-  />
-  <Submission submission={sampleSubmission} />
-  
-<CourseCard
-    course={sampleCourse}
-    onClick={() => console.log('Course Card Clicked')}
-  />
-  <Course course={sampleCourse} />
-
-
-  {/* <GroupCard
+      {/* <GroupCard
     group={sampleGroup}
     onClick={() => console.log('Group Card Clicked')}
   />
   <Group group={sampleGroup} /> */}
 
-    <InstituteCard
-    institute={sampleInstitute}
-    onClick={() => console.log('Institute Card Clicked')}
-  />
-  <Institute institute={sampleInstitute} />
+      <InstituteCard
+        institute={sampleInstitute}
+        onClick={() => console.log("Institute Card Clicked")}
+      />
+      <Institute institute={sampleInstitute} />
 
- <DepartmentCard
-    department={sampleDepartment}
-    onClick={() => console.log('Department Card Clicked')}
-  />
-  <Department department={sampleDepartment} />
+      <DepartmentCard
+        department={sampleDepartment}
+        onClick={() => console.log("Department Card Clicked")}
+      />
+      <Department department={sampleDepartment} />
 
-<ExamCard
-    exam={sampleExam}
-    onClick={() => console.log('Exam Card Clicked')}
-  />
-  <Exam exam={sampleExam} />
-  
-  <ExamScoreCard
-    score={sampleScore}
-    onClick={() => console.log('Exam Score Card Clicked')}
-  />
-  <ExamScore score={sampleScore} />
-  
+      <ExamCard
+        exam={sampleExam}
+        onClick={() => console.log("Exam Card Clicked")}
+      />
+      <Exam exam={sampleExam} />
+
+      <ExamScoreCard
+        score={sampleScore}
+        onClick={() => console.log("Exam Score Card Clicked")}
+      />
+      <ExamScore score={sampleScore} />
 
       <b>Authorization Forms</b>
       <h1>Login Form</h1>

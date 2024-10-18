@@ -25,18 +25,15 @@ import Schedule from "./components/Dashboards/Schedule/Schedule.jsx";
 import ExperimentForm from "./components/Dashboards/Experiments/Experiments.jsx";
 import CourseForm from "./components/Dashboards/Courses/Courses.jsx";
 import AttendanceForm from "./components/Dashboards/Attendance/Attendance.jsx";
-import {
-  EnrollForm,
-  LoginForm,
-} from "./components/Forms/AuthorizationForms.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import AnnouncementForm from "./components/Dashboards/Announcements/AnnouncementsForm.jsx";
+import LoginForm from "./components/Forms/AuthorizationForms/LoginForm.jsx";
+import EnrollForm from "./components/Forms/AuthorizationForms/EnrollForm.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route path='' element={<LandingPage />} />
-      <Route path='loginForm' element={<LoginForm />} />
+      <Route path='/loginForm' element={<LoginForm />} />
       <Route path='layout' element={<Layout />}>
         <Route path='' element={<Dashboard1 />} />
         <Route path='schedule' element={<Schedule />} />

@@ -81,7 +81,7 @@ const HeroSection = () => {
             quasi dolore in sit porro quo!
           </p>
           <button
-            onClick={() => navigate("/enroll")} // Updated to use navigate
+            onClick={() => navigate("/enrollForm")} // Updated to use navigate
             className='px-5 py-2 rounded-lg text-white-smoke bg-palatinate-blue my-10 hover:rounded-full'
           >
             Enroll
@@ -190,7 +190,7 @@ const Navbar = () => {
                 Sign In
               </button>
               <button
-                onClick={() => navigate("/enroll")}
+                onClick={() => navigate("/enrollForm")}
                 className='py-2 px-3 rounded-lg bg-white-smoke font-sans'
               >
                 Enroll
