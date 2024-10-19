@@ -13,53 +13,10 @@ export default function Layout() {
   const location = useLocation();
   const isRoutedToMyComponent = location.pathname === "/layout";
 
-  const [user, setUser] = useState({
-    userType: "Admin",
-    firstName: "Rutvik",
-    lastName: "Gondekar",
-    institute: {
-      nameAcronym: "VPPCOE",
-    },
-  });
-  const [error, setError] = useState(null);
-
-  const fetchDashboardData = async () => {
-    try {
-      const res = await axios.get(`${API_URL}/dashboard`, {
-        withCredentials: true,
-      });
-      console.log(res);
-      // if (user) {
-      //   console.log(user);
-      //   setUser(user);
-      // } else {
-      //   console.error("User data not found in response.");
-      // }
-    } catch (err) {
-      if (err.response) {
-        // Client received an error response (5xx, 4xx)
-        console.error("Error Response:", err.response.data);
-        setError(err.response.data.message || "An error occurred");
-      } else if (err.request) {
-        // Client never received a response, or request never left
-        console.error("Network Error:", err.request);
-        setError("Network error. Please try again.");
-      } else {
-        // Anything else
-        console.error("Error:", err.message);
-        setError(err.message || "An unexpected error occurred");
-      }
-    }
-  };
-
-  useEffect(() => {
-    fetchDashboardData();
-  }, []);
-
   return (
     <>
       <div className="sticky top-0 z-10">
-        <DashNavBar user={user} />
+        <DashNavBar />
       </div>
       <div className="flex w-full">
         <SideBar />
