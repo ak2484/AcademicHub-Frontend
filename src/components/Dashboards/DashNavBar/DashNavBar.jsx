@@ -4,14 +4,7 @@ import axios from "axios";
 import { API_URL } from "../../../constants";
 
 export default function DashNavBar() {
-  const [user, setUser] = useState({
-    userType: "Admin",
-    firstName: "Rutvik",
-    lastName: "Gondekar",
-    institute: {
-      nameAcronym: "VPPCOE",
-    },
-  });
+  const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
   const fetchDashboardData = async () => {
@@ -19,26 +12,25 @@ export default function DashNavBar() {
       const res = await axios.get(`${API_URL}/dashboard`, {
         withCredentials: true,
       });
-      console.log(res);
+
       if (res.data.data.user) {
         console.log(res.data.data.user);
         setUser(res.data.data.user);
       } else {
-        console.error("User data not found in response.");
+        setError({
+          message: "User not found!",
+        });
       }
     } catch (err) {
-      if (err.response) {
-        // Client received an error response (5xx, 4xx)
-        console.error("Error Response:", err.response.data);
-        setError(err.response.data.message || "An error occurred");
-      } else if (err.request) {
-        // Client never received a response, or request never left
-        console.error("Network Error:", err.request);
-        setError("Network error. Please try again.");
+      if (err.response.status == 401) {
+        setError({
+          status: err.response.status,
+          message: "You are not logged in!",
+        });
       } else {
-        // Anything else
-        console.error("Error:", err.message);
-        setError(err.message || "An unexpected error occurred");
+        setError({
+          message: "Something went wrong!",
+        });
       }
     }
   };
@@ -60,13 +52,37 @@ export default function DashNavBar() {
                   alt="logo"
                 />
               </div>
-              <div className=" hidden lg:flex justify-cneter space-x-4 items-center font-sans text-[20px]">
-                <span>{user.userType || "Student"}</span>
-                <span>@{user.institute.nameAcronym || "VPPCOE"}</span>
-                <button href="#" className="py-3 px-3 border rounded-full">
-                  {user.firstName || "Rutvik"} {user.lastName || "Gondekar"}
-                </button>
-              </div>
+              {error ? (
+                <div className=" hidden lg:flex justify-cneter space-x-4 items-center font-sans text-[20px]">
+                  <span>{error.message}</span>
+                  {error.status == 401 ? (
+                    <button href="#" className="py-3 px-3 border rounded-full">
+                      Login
+                    </button>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+              ) : (
+                <div>
+                  {user ? (
+                    <div className=" hidden lg:flex justify-cneter space-x-4 items-center font-sans text-[20px]">
+                      <span>{user.userType}</span>
+                      <span>@{user.institute.nameAcronym}</span>
+                      <button
+                        href="#"
+                        className="py-3 px-3 border rounded-full"
+                      >
+                        {user.firstName} {user.lastName}
+                      </button>
+                    </div>
+                  ) : (
+                    <div className=" hidden lg:flex justify-cneter space-x-4 items-center font-sans text-[20px]">
+                      Fetching of user failed
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </nav>
