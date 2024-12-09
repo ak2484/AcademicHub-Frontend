@@ -42,8 +42,8 @@ export default function DashNavBar() {
 
   return (
     <>
-      <div className='flex-col bg-white-smoke'>
-        <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke text-smoky-black flex'>
+      <div className='flex-col bg-white-smoke text-dark-imperial-blue'>
+        <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke  flex'>
           <div className='container px-4 mx-auto relative text-sm'>
             <div className='flex justify-between item-center'>
               <div className='flex items-center flex-shrink-0 '>
@@ -57,7 +57,7 @@ export default function DashNavBar() {
                 <div className=' hidden lg:flex justify-cneter space-x-4 items-center font-sans text-[20px]'>
                   <span>{error.message}</span>
                   {error.status == 401 ? (
-                    <button href='#' className='py-3 px-3 border rounded-full'>
+                    <button href='#' className='py-3 px-5 border rounded-full'>
                       <NavLink to='/loginForm'>Login</NavLink>
                     </button>
                   ) : (

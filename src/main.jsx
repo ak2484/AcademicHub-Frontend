@@ -12,7 +12,6 @@ import {
 import Layout from "./Layout.jsx";
 import LabForm from "./components/Dashboards/Labs/Labs.jsx";
 import Dashboard1 from "./components/Dashboards/Dashboard1/Dashboard1.jsx";
-import Attendance from "./components/Dashboards/Attendance/Attendance.jsx";
 // import Courses from "./components/Dashboards/Courses/Courses.jsx";
 import AssignmentForm from "./components/Dashboards/Assignments/Assignments.jsx";
 import Exams from "./components/Dashboards/Exams/Exams.jsx";
