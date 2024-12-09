@@ -33,7 +33,6 @@ export default function LoginForm() {
         }
       );
 
-      console.log(res); // Log the entire response to verify it
       if (res.status === 200 && res.data.token) {
         console.log("Login successful!"); // Check if this line is executed
         // localStorage.setItem("token", res.data.token);
@@ -50,24 +49,6 @@ export default function LoginForm() {
       alert("An error occurred during login. Please try again.");
     }
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const res = await axios({
-  //       method: "POST",
-  //       url: `${API_URL}/api/v1/users/login`,
-  //       data: {
-  //         email,
-  //         password,
-  //       },
-  //     });
-  //     console.log(res);
-  //     navigate("/layout");
-  //   } catch (error) {
-  //     console.log(error.response.data);
-  //   }
-  // };
 
   return (
     <>
