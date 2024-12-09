@@ -42,13 +42,8 @@ export default function DashNavBar() {
 
   return (
     <>
-      <div className="flex-col bg-white-smoke">
-        <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke text-smoky-black flex">
-          <div className="container px-4 mx-auto relative text-sm">
-            <div className="flex justify-between item-center">
-              <div className="flex items-center flex-shrink-0 ">
-      <div className='flex-col bg-white-smoke text-dark-imperial-blue'>
-        <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke  flex'>
+      <div className='flex-col bg-white-smoke'>
+        <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke text-smoky-black flex'>
           <div className='container px-4 mx-auto relative text-sm'>
             <div className='flex justify-between item-center'>
               <div className='flex items-center flex-shrink-0 '>
