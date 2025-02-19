@@ -18,6 +18,7 @@ import LandingPage from "./pages/LandingPage.jsx";
 import LoginForm from "./components/Forms/AuthorizationForms/LoginForm.jsx";
 import EnrollForm from "./components/Forms/AuthorizationForms/EnrollForm.jsx";
 import Chatbot from "./chat/Chatbot.jsx";
+import StudentProfile from "./components/Dashboards/Dashboard1/DashComponents/Profile.jsx";
 // import Layout from "./layouts/Layout";
 
 const router = createBrowserRouter(
@@ -27,8 +28,10 @@ const router = createBrowserRouter(
       <Route path="loginForm" element={<LoginForm />} />
       <Route path="layout" element={<Layout />}>
       <Route path="chat" element={<Chatbot />} />
+      <Route path="profile" element={<StudentProfile />} />
 
         <Route index element={<Dashboard1 />} />
+        <Route path="dashboard1" element={<Dashboard1 />} />
         <Route path="schedule" element={<Schedule />} />
         <Route path="attendance" element={<AttendanceForm students={[
           { id: 1, name: "John Doe" },

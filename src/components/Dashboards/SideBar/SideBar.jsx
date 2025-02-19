@@ -12,7 +12,7 @@ export default function SideBar() {
     <>
       {/* Mobile Toggle Button */}
       <button
-        className="md:hidden fixed top-4 left-4 z-50 bg-blue-600 text-white p-2 rounded-lg shadow-lg"
+        className="md:hidden fixed top-3 left-4 z-50 bg-blue-600 text-white p-2 rounded-lg shadow-lg"
         onClick={toggleSidebar}
       >
         {isOpen ? <IoClose size={28} /> : <IoMenu size={28} />}
@@ -20,16 +20,16 @@ export default function SideBar() {
 
       {/* Sidebar Container */}
       <div
-        className={`fixed md:static top-0 left-0 h-screen w-64 bg-lavender-web p-6 shadow-lg transition-transform md:translate-x-0 ${
+        className={`fixed md:static top-0 left-0 h-screen w-64 bg-lavender-web p-4 shadow-lg transition-transform md:translate-x-0 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } z-40`}
       >
-        <h2 className="text-xl font-bold text-palatinate-blue mb-4">My Desk</h2>
+        <h2 className="text-xl font-bold text-palatinate-blue mb-2">My Desk</h2>
 
         <ul className="space-y-2">
           <li>
             <NavLink
-              to="/layout/dashboard"
+              to="/layout/dashboard1"
               className={({ isActive }) => `${isActive ? activeStyle : ""}`}
             >
               Dashboard
@@ -53,7 +53,7 @@ export default function SideBar() {
           </li>
         </ul>
 
-        <h2 className="text-xl font-bold mt-6 text-palatinate-blue">Academics</h2>
+        <h2 className="text-xl font-bold mt-4 text-palatinate-blue">Academics</h2>
         <ul className="space-y-2">
           <li>
             <NavLink
@@ -105,7 +105,7 @@ export default function SideBar() {
           </li>
         </ul>
 
-        <h2 className="text-xl font-bold mt-6 text-palatinate-blue">Institute</h2>
+        <h2 className="text-xl font-bold mt-4 text-palatinate-blue">Institute</h2>
         <ul className="space-y-2">
           <li>
             <NavLink
@@ -147,6 +147,14 @@ export default function SideBar() {
               className={({ isActive }) => `${isActive ? activeStyle : ""}`}
             >
               Chat AI
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/layout/profile"
+              className={({ isActive }) => `${isActive ? activeStyle : ""}`}
+            >
+              Profile
             </NavLink>
           </li>
         </ul>

@@ -49,7 +49,7 @@ export default function DashNavBar() {
               <div className='flex items-center flex-shrink-0 '>
                 <img
                   className='h-12 w-auto mr-2 '
-                  src='./src/assets/AcademicHubLogo2.png'
+                  src='../src/assets/AcademicHubLogo2.png'
                   alt='logo'
                 />
               </div>

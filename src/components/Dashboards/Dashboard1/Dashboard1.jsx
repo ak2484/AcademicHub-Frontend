@@ -41,7 +41,7 @@ const Dashboard1 = () => {
         <div className="profile-card">
           <div className="profile-info">
             <img
-              src="./src/assets/Akash.jpg"
+              src="../src/assets/Akash.jpg"
               alt="Profile"
               className="profile-img"
             />
