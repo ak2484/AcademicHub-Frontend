@@ -42,43 +42,38 @@ export default function AssignmentForm({ courses, labs }) {
       case 1:
         return (
           <>
-            <h3 className='text-2xl font-semibold text-dark-imperial-blue mb-6'>
+            <h3 className="text-2xl font-semibold text-dark-imperial-blue mb-6 text-center">
               Basic Assignment Information
             </h3>
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='name'
-              >
+            <div className="mb-4">
+              <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
                 Assignment Name
               </label>
               <input
-                type='text'
-                id='name'
-                name='name'
+                type="text"
+                name="name"
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-                placeholder='Enter assignment name'
+                className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                          focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
+                placeholder="Enter assignment name"
               />
             </div>
 
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='instruction'
-              >
+            <div className="mb-4">
+              <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
                 Instructions
               </label>
               <textarea
-                id='instruction'
-                name='instruction'
+                name="instruction"
                 required
                 value={formData.instruction}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-                placeholder='Enter instructions'
+                className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                          focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
+                placeholder="Enter instructions"
+                rows="3"
               />
             </div>
           </>
@@ -86,88 +81,78 @@ export default function AssignmentForm({ courses, labs }) {
       case 2:
         return (
           <>
-            <h3 className='text-2xl font-semibold text-dark-imperial-blue mb-6'>
+            <h3 className="text-2xl font-semibold text-dark-imperial-blue mb-6 text-center">
               Assignment Dates
             </h3>
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='dateOfPerformance'
-              >
-                Date of Performance
-              </label>
-              <input
-                type='date'
-                id='dateOfPerformance'
-                name='dateOfPerformance'
-                required
-                value={formData.dateOfPerformance}
-                onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-              />
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
+                  Date of Performance
+                </label>
+                <input
+                  type="date"
+                  name="dateOfPerformance"
+                  required
+                  value={formData.dateOfPerformance}
+                  onChange={handleChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                            focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
+                />
+              </div>
 
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='dateOfSubmission'
-              >
-                Date of Submission
-              </label>
-              <input
-                type='date'
-                id='dateOfSubmission'
-                name='dateOfSubmission'
-                required
-                value={formData.dateOfSubmission}
-                onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-              />
+              <div>
+                <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
+                  Date of Submission
+                </label>
+                <input
+                  type="date"
+                  name="dateOfSubmission"
+                  required
+                  value={formData.dateOfSubmission}
+                  onChange={handleChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                            focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
+                />
+              </div>
             </div>
           </>
         );
       case 3:
         return (
           <>
-            <h3 className='text-2xl font-semibold text-dark-imperial-blue mb-6'>
+            <h3 className="text-2xl font-semibold text-dark-imperial-blue mb-6 text-center">
               Subject & Marks
             </h3>
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='subjectType'
-              >
+            <div className="mb-4">
+              <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
                 Subject Type
               </label>
               <select
-                id='subjectType'
-                name='subjectType'
+                name="subjectType"
                 required
                 value={formData.subjectType}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                          focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
               >
-                <option value='Course'>Course</option>
-                <option value='Lab'>Lab</option>
+                <option value="Course">Course</option>
+                <option value="Lab">Lab</option>
               </select>
             </div>
 
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='subject'
-              >
+            <div className="mb-4">
+              <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
                 Subject
               </label>
               <select
-                id='subject'
-                name='subject'
+                name="subject"
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+                className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                          focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
               >
-                <option value=''>Select Subject</option>
+                <option value="">Select Subject</option>
                 {availableSubjects.map((subject) => (
                   <option key={subject} value={subject}>
                     {subject}
@@ -176,22 +161,19 @@ export default function AssignmentForm({ courses, labs }) {
               </select>
             </div>
 
-            <div className='mb-4'>
-              <label
-                className='block text-dark-imperial-blue text-sm font-medium mb-2'
-                htmlFor='marks'
-              >
+            <div className="mb-4">
+              <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
                 Marks
               </label>
               <input
-                type='number'
-                id='marks'
-                name='marks'
+                type="number"
+                name="marks"
                 required
                 value={formData.marks}
                 onChange={handleChange}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
-                placeholder='Enter marks'
+                className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black 
+                          focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
+                placeholder="Enter marks"
               />
             </div>
           </>
@@ -202,34 +184,31 @@ export default function AssignmentForm({ courses, labs }) {
   };
 
   return (
-    <div className='flex justify-center items-center min-h-screen'>
-      <form
-        className='mx-auto p-8 bg-lavender-web shadow-lg rounded-lg w-[400px]'
-        onSubmit={handleSubmit}
-      >
+    <div className="flex justify-center items-center min-h-screen p-4">
+      <form className="w-full max-w-lg p-6 md:p-8 bg-lavender-web shadow-lg rounded-lg" onSubmit={handleSubmit}>
         {renderStep()}
-        <div className='flex  justify-between mt-5'>
+        <div className="flex justify-between mt-5">
           {currentStep > 1 && (
             <button
-              type='button'
+              type="button"
               onClick={handlePrevStep}
-              className='bg-smoky-black text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-gray-500'
+              className="bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition duration-200"
             >
               Previous
             </button>
           )}
           {currentStep < 3 ? (
             <button
-              type='button'
+              type="button"
               onClick={handleNextStep}
-              className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palatinate-blue'
+              className="bg-palatinate-blue text-white px-6 py-2 rounded-md hover:bg-dark-imperial-blue transition duration-200"
             >
               Next
             </button>
           ) : (
             <button
-              type='submit'
-              className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palatinate-blue'
+              type="submit"
+              className="bg-palatinate-blue text-white px-6 py-2 rounded-md hover:bg-dark-imperial-blue transition duration-200"
             >
               Submit
             </button>

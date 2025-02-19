@@ -39,11 +39,10 @@ const Schedule = () => {
     ],
   };
 
-  // Generate a map for the times
   const times = [
     "9:00 AM - 10:00 AM",
     "10:00 AM - 11:00 AM",
-    "11:00 AM - 11:20 AM", // Lunch Break
+    "11:00 AM - 11:20 AM", // Break
     "11:20 AM - 12:20 PM",
     "12:20 PM - 1:20 PM",
     "1:20 PM - 2:00 PM", // Lunch Break
@@ -51,54 +50,58 @@ const Schedule = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center p-6  '>
-      <div className='w-full max-w-4xl bg-lavender-web text-dark-imperial-blue rounded-2xl shadow-xl p-6 overflow-x-auto'>
-        <h2 className='text-2xl font-semibold text-palatinate-blue mb-6 text-center font-sans'>
+    <div className="flex flex-col items-center justify-center p-6">
+      <div className="w-full max-w-4xl bg-lavender-web text-dark-imperial-blue rounded-2xl shadow-xl p-6">
+        <h2 className="text-2xl font-semibold text-palatinate-blue mb-6 text-center font-sans">
           Schedule
         </h2>
-        <table className='min-w-full border-collapse border border-gray-300'>
-          <thead>
-            <tr className='bg-blue-100'>
-              <th className='border border-smoky-black p-3 bg-palatinate-blue text-white-smoke font-semibold text-center'>
-                Day/Time
-              </th>
-              {times.map((time, index) => (
-                <th
-                  key={index}
-                  className='border border-smoky-black p-3 bg-palatinate-blue text-white-smoke font-semibold text-center'
-                >
-                  {time}
+        
+        {/* Scrollable Table Wrapper for Mobile */}
+        <div className="overflow-x-auto">
+          <table className="min-w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-blue-100">
+                <th className="border border-smoky-black p-3 bg-palatinate-blue text-white-smoke font-semibold text-center">
+                  Day/Time
                 </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {Object.keys(schedule).map((day) => (
-              <tr key={day} className=''>
-                <td className='border border-gray-300 p-3 text-center font-semibold text-gray-700'>
-                  {day}
-                </td>
-                {times.map((time, index) => {
-                  const session = schedule[day].find((s) => s.time === time);
-                  return (
-                    <td
-                      key={index}
-                      className='border border-smoky-black p-3 text-center hover:bg-lavender-web'
-                    >
-                      {session
-                        ? session.subject
-                        : time === "11:00 AM - 11:20 AM"
-                        ? "Break"
-                        : time === "1:20 PM - 2:00 PM"
-                        ? "Lunch Break"
-                        : ""}
-                    </td>
-                  );
-                })}
+                {times.map((time, index) => (
+                  <th
+                    key={index}
+                    className="border border-smoky-black p-3 bg-palatinate-blue text-white-smoke font-semibold text-center"
+                  >
+                    {time}
+                  </th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {Object.keys(schedule).map((day) => (
+                <tr key={day} className="">
+                  <td className="border border-gray-300 p-3 text-center font-semibold text-gray-700">
+                    {day}
+                  </td>
+                  {times.map((time, index) => {
+                    const session = schedule[day].find((s) => s.time === time);
+                    return (
+                      <td
+                        key={index}
+                        className="border border-smoky-black p-3 text-center hover:bg-lavender-web text-sm md:text-base"
+                      >
+                        {session
+                          ? session.subject
+                          : time === "11:00 AM - 11:20 AM"
+                          ? "Break"
+                          : time === "1:20 PM - 2:00 PM"
+                          ? "Lunch Break"
+                          : ""}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

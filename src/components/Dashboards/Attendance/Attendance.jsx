@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const AttendanceForm = ({ students }) => {
   const [attendance, setAttendance] = useState(
@@ -15,37 +15,50 @@ const AttendanceForm = ({ students }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Attendance Submitted:', attendance);
+    console.log("Attendance Submitted:", attendance);
     // Implement backend API call if needed
   };
 
   return (
-    <div className="m-4 p-6 bg-white rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2">
-      <h1 className="text-2xl font-bold mb-6 text-gray-800 text-center">Mark Attendance</h1>
-      <form onSubmit={handleSubmit}>
-        {students.map((student) => (
-          <div key={student.id} className="flex justify-between items-center my-4">
-            <span className="text-lg text-gray-700">{student.name}</span>
-            <label className="inline-flex items-center">
-              <input
-                type="checkbox"
-                checked={attendance.find((a) => a.id === student.id)?.present || false}
-                onChange={() => handleAttendanceChange(student.id)}
-                className="form-checkbox h-5 w-5 text-blue-600"
-              />
-              <span className="ml-2 text-gray-600">Present</span>
-            </label>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4 py-6">
+      <div className="w-full max-w-3xl bg-white rounded-lg shadow-lg p-6 md:p-8">
+        <h1 className="text-3xl font-bold text-dark-imperial-blue mb-6 text-center">
+          Mark Attendance
+        </h1>
+
+        <form onSubmit={handleSubmit}>
+          <div className="space-y-4">
+            {students.map((student) => (
+              <div
+                key={student.id}
+                className="flex justify-between items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300"
+              >
+                <span className="text-lg font-medium text-gray-800">{student.name}</span>
+                <label className="inline-flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={attendance.find((a) => a.id === student.id)?.present || false}
+                    onChange={() => handleAttendanceChange(student.id)}
+                    className="form-checkbox h-5 w-5 text-palatinate-blue border-gray-300 rounded focus:ring-palatinate-blue"
+                  />
+                  <span className="ml-2 text-gray-700">Present</span>
+                </label>
+              </div>
+            ))}
           </div>
-        ))}
-        <div className="text-center mt-6">
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-            Submit Attendance
-          </button>
-        </div>
-      </form>
+
+          {/* Submit Button */}
+          <div className="text-center mt-8">
+            <button
+              type="submit"
+              className="w-full md:w-auto bg-palatinate-blue text-white px-6 py-3 rounded-lg 
+                         font-semibold text-lg shadow-md hover:bg-dark-imperial-blue transition duration-300"
+            >
+              Submit Attendance
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

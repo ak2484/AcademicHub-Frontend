@@ -1,86 +1,91 @@
 import React, { useState } from "react";
 
-const AnnouncementForm = ({ handleAnnouncementSubmit, onAdd, onCancel }) => {
+const AnnouncementForm = ({ handleAnnouncementSubmit, onCancel }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const now = new Date();
-
   const hours = now.getHours();
   const minutes = now.getMinutes();
-
-  const currentTime = `${hours.toString().padStart(2, "0")}:${minutes
-    .toString()
-    .padStart(2, "0")}`;
+  const currentTime = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title && content) {
+    if (title.trim() && content.trim()) {
       handleAnnouncementSubmit({
         title,
         content,
         date: now.toLocaleDateString(),
         time: currentTime,
       });
-      onAdd({ title, content });
       setTitle("");
       setContent("");
     }
   };
 
   return (
-    <div className='fixed inset-0 flex items-center justify-center bg-white-smoke bg-opacity-70'>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
       <form
-        className='w-auto p-8 bg-lavender-web shadow-lg shadow-smoky-black rounded-lg'
+        className="w-full max-w-lg p-6 md:p-8 bg-lavender-web shadow-lg rounded-lg"
         onSubmit={handleSubmit}
       >
-        <h2 className='text-2xl font-bold text-dark-imperial-blue text-center mb-6'>
+        {/* Form Header */}
+        <h2 className="text-2xl font-bold text-dark-imperial-blue text-center mb-6">
           Create New Announcement
         </h2>
-        <div className='mb-4'>
-          <label className='block text-dark-imperial-blue text-sm font-medium mb-2'>
+
+        {/* Title Input */}
+        <div className="mb-4">
+          <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
             Title:
           </label>
           <input
-            type='text'
-            className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+            type="text"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black
+                       focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder='Enter announcement title'
+            placeholder="Enter announcement title"
             required
           />
         </div>
-        <div className='mb-4'>
-          <label className='block text-dark-imperial-blue text-sm font-medium mb-2'>
+
+        {/* Content Textarea */}
+        <div className="mb-4">
+          <label className="block text-dark-imperial-blue text-sm font-medium mb-2">
             Content:
           </label>
           <textarea
-            className='w-full px-3 py-2 border border-gray-300 rounded-md placeholder-smoky-black text-smoky-black bg-white focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue'
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white-smoke text-smoky-black
+                       focus:ring-2 focus:ring-palatinate-blue focus:border-palatinate-blue outline-none"
             value={content}
             onChange={(e) => setContent(e.target.value)}
-            placeholder='Enter announcement content'
-            rows='4'
+            placeholder="Enter announcement content"
+            rows="4"
             required
           ></textarea>
         </div>
-        <div className='text-center'>
+
+        {/* Buttons */}
+        <div className="flex justify-end space-x-3">
           <button
-            type='button'
-            className='mr-2 px-4 py-2 bg-gray-300 rounded'
+            type="button"
+            className="px-4 py-2 bg-gray-400 text-gray-800 rounded-md hover:bg-gray-500 transition duration-200"
             onClick={onCancel}
           >
             Cancel
           </button>
           <button
-            type='submit'
-            className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palatinate-blue hover:bg-blue-700 transition duration-300'
-            // onClick={handleSubmit}
+            type="submit"
+            className="bg-palatinate-blue text-white-smoke px-6 py-2 rounded-md font-semibold 
+                       hover:bg-dark-imperial-blue transition duration-200"
           >
-            Submit Announcement
+            Submit
           </button>
         </div>
       </form>
     </div>
   );
 };
+
 export default AnnouncementForm;
