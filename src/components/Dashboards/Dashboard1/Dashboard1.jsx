@@ -20,39 +20,81 @@
 //   );
 // }
 
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaBookOpen, FaTasks, FaChartLine, FaBullhorn } from "react-icons/fa";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { API_URL } from "../../../constants";
 
 const Dashboard1 = () => {
   const attendancePercentage = 63; // Attendance percentage
+  const [dashboard, setDashboard] = useState(null);
+  const [error, setError] = useState(null);
+
+  const fetchDashboardData = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/nav`, {
+        withCredentials: true,
+      });
+
+      if (res.data.data.user) {
+        console.log(res.data.dashboard);
+        setDashboard(res.data.dashboard);
+      } else {
+        setError({
+          message: "User not found!",
+        });
+      }
+    } catch (err) {
+      if (err.response.status == 401) {
+        setError({
+          status: err.response.status,
+          message: "You are not logged in!",
+        });
+      } else {
+        setError({
+          message: "Something went wrong!",
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchDashboardData();
+  }, [dashboard]);
 
   return (
     <div className="dashboard-container">
-
-
       {/* Main Content */}
       <main className="main-content">
         {/* Profile Header */}
         <div className="profile-card">
           <div className="profile-info">
             <img
-              src="./src/assets/Akash.jpg"
+              src="../src/assets/Akash.jpg"
               alt="Profile"
               className="profile-img"
             />
             <div>
+              <h2></h2>
               <h2>Akash Nahak</h2>
-              <p>ID: <strong>VU4F2223034</strong></p>
-              <p>Year: <strong>3</strong> | Sem: <strong>5</strong></p>
-              <p>Branch: <strong>Information Technology</strong></p>
+              <p>
+                ID: <strong>VU4F2223034</strong>
+              </p>
+              <p>
+                Year: <strong>3</strong> | Sem: <strong>5</strong>
+              </p>
+              <p>
+                Branch: <strong>Information Technology</strong>
+              </p>
             </div>
           </div>
-          <a href="/profile" className="view-profile">View Profile &gt;</a>
+          <a href="/profile" className="view-profile">
+            View Profile &gt;
+          </a>
         </div>
 
         {/* Cards Section */}
@@ -66,7 +108,9 @@ const Dashboard1 = () => {
                 text={`${attendancePercentage}%`}
                 styles={buildStyles({
                   textSize: "16px",
-                  pathColor: `rgba(62, 152, 199, ${attendancePercentage / 100})`,
+                  pathColor: `rgba(62, 152, 199, ${
+                    attendancePercentage / 100
+                  })`,
                   textColor: "#333",
                   trailColor: "#eee",
                   backgroundColor: "#fff",
@@ -121,6 +165,3 @@ const Dashboard1 = () => {
 };
 
 export default Dashboard1;
-
-
-

@@ -22,11 +22,17 @@ import LandingPage from "./pages/LandingPage.jsx";
 import LoginForm from "./components/Forms/AuthorizationForms/LoginForm.jsx";
 import EnrollForm from "./components/Forms/AuthorizationForms/EnrollForm.jsx";
 import Chatbot from "./chat/Chatbot.jsx";
+<<<<<<< HEAD
+=======
+import StudentProfile from "./components/Dashboards/Dashboard1/DashComponents/Profile.jsx";
+// import Layout from "./layouts/Layout";
+>>>>>>> 8b21d6e13fbc149a9610f19a81476345568d9cb3
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index element={<LandingPage />} />
+<<<<<<< HEAD
       <Route path='loginForm' element={<LoginForm />} />
       <Route path='layout' element={<Layout />}>
         <Route index element={<Dashboard1 />} />
@@ -104,6 +110,34 @@ const router = createBrowserRouter(
         <Route path='collegeSite' element={<Collegesite />} />
         <Route path='enrollForm' element={<EnrollForm />} />
         <Route path='chat' element={<Chatbot />} />
+=======
+      <Route path="loginForm" element={<LoginForm />} />
+      <Route path="layout" element={<Layout />}>
+      <Route path="chat" element={<Chatbot />} />
+      <Route path="profile" element={<StudentProfile />} />
+
+        <Route index element={<Dashboard1 />} />
+        <Route path="dashboard1" element={<Dashboard1 />} />
+        <Route path="schedule" element={<Schedule />} />
+        <Route path="attendance" element={<AttendanceForm students={[
+          { id: 1, name: "John Doe" },
+          { id: 2, name: "Jane Smith" },
+          { id: 3, name: "Alice Johnson" },
+          { id: 4, name: "Bob Brown" }
+        ]} />} />
+        
+        <Route path="courses" element={<CourseForm departments={["CSE", "Mechanical", "Electrical"]} teachers={["Mr. Smith", "Ms. Johnson", "Dr. Brown"]} />} />
+        <Route path="labs" element={<LabForm courses={["CS 101", "Physics 201"]} departments={["CSE", "Mechanical"]} teachers={["Mr. Smith", "Ms. Johnson"]} labAssistants={["John Doe", "Jane Roe"]} />} />
+        <Route path="assignments" element={<AssignmentForm courses={["Math 101", "Physics 202"]} labs={["Physics Lab", "Chemistry Lab"]} />} />
+        <Route path="experiments" element={<ExperimentForm labs={["Physics Lab", "Chemistry Lab"]} />} />
+        <Route path="exams" element={<Exams courses={["Math 101", "Physics 202"]} labs={["Physics Lab", "Chemistry Lab"]} />} />
+        <Route path="resources" element={<ResourceForm courses={["Math 101", "Physics 201"]} labs={["Physics Lab", "Chemistry Lab"]} users={["Professor John", "Dr. Smith"]} />} />
+        <Route path="announcements" element={<Announcements />} />
+        <Route path="calendar" element={<Calendar />} />
+        <Route path="enquiry" element={<Enquiry />} />
+        <Route path="collegeSite" element={<Collegesite />} />
+        <Route path="enrollForm" element={<EnrollForm />} />
+>>>>>>> 8b21d6e13fbc149a9610f19a81476345568d9cb3
       </Route>
     </Route>
   )
