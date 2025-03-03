@@ -20,21 +20,62 @@
 //   );
 // }
 
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaBookOpen, FaTasks, FaChartLine, FaBullhorn } from "react-icons/fa";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { API_URL } from "../../../constants";
 
 const Dashboard1 = () => {
-  const attendancePercentage = 63; // Attendance percentage
+  const attendancePercentage = 63;
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
+
+  const fetchNavData = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/dashboard`, {
+        withCredentials: true,
+      });
+
+      if (res.data.dashboard.user) {
+        console.log(res.data.dashboard.user);
+        setUser(res.data.dashboard.user);
+      } else {
+        setError({
+          message: "User not found!",
+        });
+      }
+    } catch (err) {
+      if (err.response.status == 401) {
+        setError({
+          status: err.response.status,
+          message: "You are not logged in!",
+        });
+      } else {
+        setError({
+          message: "Something went wrong!",
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchNavData();
+  }, []);
+
+  if (error) {
+    return <p>Error: {error.message}</p>; // Display error message if any
+  }
+
+  if (!user) {
+    return <p>Loading...</p>; // Display loading text until user is set
+  }
 
   return (
     <div className="dashboard-container">
-
-
       {/* Main Content */}
       <main className="main-content">
         {/* Profile Header */}
@@ -46,13 +87,25 @@ const Dashboard1 = () => {
               className="profile-img"
             />
             <div>
-              <h2>Akash Nahak</h2>
-              <p>ID: <strong>VU4F2223034</strong></p>
-              <p>Year: <strong>3</strong> | Sem: <strong>5</strong></p>
-              <p>Branch: <strong>Information Technology</strong></p>
+              <h2>
+                {user.firstName} {user.lastName}
+              </h2>
+              <p>
+                ID: <strong>{user.instituteAllottedId}</strong>
+              </p>
+              <p>
+                Year: <strong>{user.currentYear}</strong> | Sem:{" "}
+                <strong>{user.currentSemester}</strong>
+              </p>
+              <p>
+                Branch:{" "}
+                <strong>{user.department ? user.department.name : "NA"}</strong>
+              </p>
             </div>
           </div>
-          <a href="/profile" className="view-profile">View Profile &gt;</a>
+          <a href="/layout/profile" className="view-profile">
+            View Profile &gt;
+          </a>
         </div>
 
         {/* Cards Section */}
@@ -66,7 +119,9 @@ const Dashboard1 = () => {
                 text={`${attendancePercentage}%`}
                 styles={buildStyles({
                   textSize: "16px",
-                  pathColor: `rgba(62, 152, 199, ${attendancePercentage / 100})`,
+                  pathColor: `rgba(62, 152, 199, ${
+                    attendancePercentage / 100
+                  })`,
                   textColor: "#333",
                   trailColor: "#eee",
                   backgroundColor: "#fff",
@@ -121,6 +176,3 @@ const Dashboard1 = () => {
 };
 
 export default Dashboard1;
-
-
-
