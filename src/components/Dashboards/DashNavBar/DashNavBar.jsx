@@ -8,15 +8,15 @@ export default function DashNavBar() {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-  const fetchDashboardData = async () => {
+  const fetchNavData = async () => {
     try {
-      const res = await axios.get(`${API_URL}/dashboard`, {
+      const res = await axios.get(`${API_URL}/nav`, {
         withCredentials: true,
       });
 
-      if (res.data.data.user) {
-        console.log(res.data.data.user);
-        setUser(res.data.data.user);
+      if (res.data.nav.user) {
+        console.log(res.data.nav.user);
+        setUser(res.data.nav.user);
       } else {
         setError({
           message: "User not found!",
@@ -37,28 +37,28 @@ export default function DashNavBar() {
   };
 
   useEffect(() => {
-    fetchDashboardData();
+    fetchNavData();
   }, []);
 
   return (
     <>
-      <div className='flex-col bg-white-smoke'>
-        <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke text-smoky-black flex'>
-          <div className='container px-4 mx-auto relative text-sm'>
-            <div className='flex justify-between item-center'>
-              <div className='flex items-center flex-shrink-0 '>
+      <div className="flex-col bg-white-smoke">
+        <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-white-smoke text-smoky-black flex">
+          <div className="container px-4 mx-auto relative text-sm">
+            <div className="flex justify-between item-center">
+              <div className="flex items-center flex-shrink-0 ">
                 <img
-                  className='h-12 w-auto mr-2 '
-                  src='../src/assets/AcademicHubLogo2.png'
-                  alt='logo'
+                  className="h-12 w-auto mr-2 "
+                  src="../src/assets/AcademicHubLogo2.png"
+                  alt="logo"
                 />
               </div>
               {error ? (
-                <div className=' hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]'>
+                <div className=" hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]">
                   <span>{error.message}</span>
                   {error.status == 401 ? (
-                    <button href='#' className='py-3 px-3 border rounded-full'>
-                      <NavLink to='/loginForm'>Login</NavLink>
+                    <button href="#" className="py-3 px-3 border rounded-full">
+                      <NavLink to="/loginForm">Login</NavLink>
                     </button>
                   ) : (
                     <div></div>
@@ -67,18 +67,20 @@ export default function DashNavBar() {
               ) : (
                 <div>
                   {user ? (
-                    <div className=' hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]'>
+                    <div className=" hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]">
                       <span>{user.userType}</span>
-                      <span>@{user.institute.nameAcronym}</span>
+                      <span>
+                        {user.institute ? `@${user.institute.nameAcronym}` : ""}
+                      </span>
                       <button
-                        href='#'
-                        className='py-3 px-3 border rounded-full'
+                        href="#"
+                        className="py-3 px-3 border rounded-full"
                       >
                         {user.firstName} {user.lastName}
                       </button>
                     </div>
                   ) : (
-                    <div className=' hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]'>
+                    <div className=" hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]">
                       Fetching of user failed
                     </div>
                   )}
