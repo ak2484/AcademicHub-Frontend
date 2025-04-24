@@ -30,19 +30,19 @@ import axios from "axios";
 import { API_URL } from "../../../constants";
 
 const Dashboard1 = () => {
-  const attendancePercentage = 63; // Attendance percentage
-  const [dashboard, setDashboard] = useState(null);
+  const attendancePercentage = 63;
+  const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-  const fetchDashboardData = async () => {
+  const fetchNavData = async () => {
     try {
-      const res = await axios.get(`${API_URL}/nav`, {
+      const res = await axios.get(`${API_URL}/dashboard`, {
         withCredentials: true,
       });
 
-      if (res.data.data.user) {
-        console.log(res.data.dashboard);
-        setDashboard(res.data.dashboard);
+      if (res.data.dashboard.user) {
+        console.log(res.data.dashboard.user);
+        setUser(res.data.dashboard.user);
       } else {
         setError({
           message: "User not found!",
@@ -63,8 +63,16 @@ const Dashboard1 = () => {
   };
 
   useEffect(() => {
-    fetchDashboardData();
-  }, [dashboard]);
+    fetchNavData();
+  }, []);
+
+  if (error) {
+    return <p>Error: {error.message}</p>; // Display error message if any
+  }
+
+  if (!user) {
+    return <p>Loading...</p>; // Display loading text until user is set
+  }
 
   return (
     <div className="dashboard-container">
@@ -79,20 +87,23 @@ const Dashboard1 = () => {
               className="profile-img"
             />
             <div>
-              <h2></h2>
-              <h2>Akash Nahak</h2>
+              <h2>
+                {user.firstName} {user.lastName}
+              </h2>
               <p>
-                ID: <strong>VU4F2223034</strong>
+                ID: <strong>{user.instituteAllottedId}</strong>
               </p>
               <p>
-                Year: <strong>3</strong> | Sem: <strong>5</strong>
+                Year: <strong>{user.currentYear}</strong> | Sem:{" "}
+                <strong>{user.currentSemester}</strong>
               </p>
               <p>
-                Branch: <strong>Information Technology</strong>
+                Branch:{" "}
+                <strong>{user.department ? user.department.name : "NA"}</strong>
               </p>
             </div>
           </div>
-          <a href="/profile" className="view-profile">
+          <a href="/layout/profile" className="view-profile">
             View Profile &gt;
           </a>
         </div>

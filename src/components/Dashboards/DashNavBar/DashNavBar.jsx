@@ -14,7 +14,7 @@ export default function DashNavBar() {
         withCredentials: true,
       });
 
-      if (res.data.data.user) {
+      if (res.data.nav.user) {
         console.log(res.data.nav.user);
         setUser(res.data.nav.user);
       } else {
@@ -69,7 +69,9 @@ export default function DashNavBar() {
                   {user ? (
                     <div className=" hidden lg:flex justify-center space-x-4 items-center font-sans text-[20px]">
                       <span>{user.userType}</span>
-                      <span>@{user.institute.nameAcronym}</span>
+                      <span>
+                        {user.institute ? `@${user.institute.nameAcronym}` : ""}
+                      </span>
                       <button
                         href="#"
                         className="py-3 px-3 border rounded-full"
