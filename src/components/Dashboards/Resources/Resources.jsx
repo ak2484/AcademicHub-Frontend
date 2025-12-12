@@ -415,7 +415,7 @@ export default function ResourceForm({ courses, labs, users }) {
               </p>
               <button
                 onClick={() => setShowForm(true)}
-                className='bg-palatinate-blue text-white px-6 py-2 rounded-full hover:bg-dark-imperial-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-palatinate-blue'>
+                className='bg-palatinate-blue text-white-smoke px-6 py-2 rounded-full hover:bg-dark-imperial-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-palatinate-blue'>
                 Add First Resource
               </button>
             </div>

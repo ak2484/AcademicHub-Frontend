@@ -28,8 +28,9 @@ import StudentProfile from './components/Dashboards/Dashboard1/DashComponents/Pr
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
-      <Route index element={<LandingPage />} />
-      <Route path='loginForm' element={<LoginForm />} />
+      {/* <Route index element={<LandingPage />} /> */}
+      <Route index element={<LoginForm />} />
+      {/* <Route path='loginForm' element={<LoginForm />} /> */}
       <Route path='layout' element={<Layout />}>
         <Route path='chat' element={<Chatbot />} />
         <Route path='profile' element={<StudentProfile />} />
